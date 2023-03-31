@@ -571,10 +571,35 @@ responsive formulario
 
 /* Utilizo otra disposicion del grid que para el index */
 
+.wrapper_experiencia{
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    ". experiencia experiencia experiencia ."
+    "footer footer footer footer footer";
+  grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+  grid-template-rows: repeat(3);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  background-color: aliceblue;
+  flex-wrap: wrap;
+}
+
+.experiencia{
+  grid-area: experiencia;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+
+
+
 
 
 /*
-Estilos Responsive
+Estilos Responsive pagina principal
 */
 
 @media screen and (max-width: 50rem) {
