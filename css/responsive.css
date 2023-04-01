@@ -1,9 +1,6 @@
-/*
-Estilos Responsive Index.htma
-*/
 
 /*
-Estilos Skills responsive ------------------ index.html
+Estilos Responsive Index.html
 */
 
 @media screen and (max-width: 576px) {
@@ -44,9 +41,6 @@ Estilos Skills responsive ------------------ index.html
     align-items: center;
   }
 
-  .titulo_texto {
-  }
-
   .ultimos_trabajos {
     display: flex;
     flex-direction: column;
@@ -59,59 +53,10 @@ Estilos Skills responsive ------------------ index.html
     height: 300px;
   }
 
-  .ultimos_trabajos img:hover {
-  }
+
 }
 
-/*@media screen and (max-width: 540px) {
-    #container {
-      height: auto;
-    }
-    .box {
-      padding: 20px;
-    }
-    .card {
-      width: 49%;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .box h1 {
-      font-size: 1.5rem;
-    }
-    .cards {
-      justify-content: center;
-    }
-    .card {
-      margin-bottom: 20px;
-      width: 80%;
-    }
-  }
-  */
 
-@media only screen and (min-width: 700px) {
-  .wrapper2 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .wrapper2 > * {
-    padding: 2em;
-  }
-
-  .company-info {
-    border-radius: 2px 0 0 2px;
-  }
-
-  .contact {
-    border-radius: 0 2px 2px 0;
-  }
-
-  .company-info h3,
-  .company-info ul,
-  .brand {
-    text-align: left;
-  }
-}
 
 /*
   Estilos Responsive Proyectos.html
@@ -139,8 +84,18 @@ Estilos Skills responsive ------------------ index.html
     align-items: center;
     justify-content: center;
   }
-  .galeria {
+  .proyectos .galeria {
     width: 90%;
+  }
+
+  .footer .contenido{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer .contenido .redes_sociales{
+    display: flex;
+    flex-direction:row;
   }
 }
 
@@ -148,48 +103,123 @@ Estilos Skills responsive ------------------ index.html
   Estilos Responsive Experiencia.html
   */
 
+  @media screen and (max-width: 576px) {
+    .wrapper_experiencia {
+      display: grid;
+      grid-template-areas:
+        "nav"
+        "experiencia"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+  
+      background-color: aliceblue;
+    }
+  
+    .experiencia {
+      grid-area: experiencia;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+ 
+    .footer .contenido{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .footer_contenido .redes_sociales{
+      display: flex;
+      flex-direction:row;
+    }
+  }
+
 /*
   Estilos Responsive Contacto.html
   */
 
-/*
-  responsive formulario 
-  */
+  @media screen and (max-width: 576px) {
+    .wrapper_contacto {
+      display: grid;
+      grid-template-areas:
+        "nav"
+        "contacto"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+  
+      background-color: aliceblue;
+    }
+  
+    .formulario {
+      grid-area: contacto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-@media (max-width: 950px) {
-  .container {
-    width: 90%;
-    padding: 30px 40px 40px 35px;
+    .contenido_formulario {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+    .contenido_formulario .columna_izq {
+      display: none;
+    }
+
+    .contenido_formulario .columna_der {
+      width: 90%;
+    }
+    
+    .contenido{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contenido .redes_sociales{
+      display: flex;
+      flex-direction:row;
+    }
   }
-  .container .content .right-side {
-    width: 75%;
-    margin-left: 55px;
-  }
-}
-@media (max-width: 820px) {
-  .container {
-    margin: 40px 0;
-    height: 100%;
-  }
-  .container .content {
-    flex-direction: column-reverse;
-  }
-  .container .content .left-side {
-    width: 100%;
-    flex-direction: row;
-    margin-top: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .container .content .left-side::before {
-    display: none;
-  }
-  .container .content .right-side {
-    width: 100%;
-    margin-left: 0;
-  }
-}
+
 
 /*
   Estilos Responsive Blog.html
   */
+
+  @media screen and (max-width: 576px) {
+    .wrapper_proyectos {
+      display: grid;
+      grid-template-areas:
+        "nav"
+        "proyectos"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+  
+      background-color: aliceblue;
+    }
+  
+
+
+
+
+  
+    .contenido{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .redes_sociales{
+      display: flex;
+      flex-direction:row;
+    }
+  }
