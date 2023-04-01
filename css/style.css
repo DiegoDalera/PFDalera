@@ -71,6 +71,8 @@ Estilos Barra de navegacion
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  z-index: 100;
 }
 
 ul.menu {
@@ -106,15 +108,19 @@ Estilos Header
   padding-left: 50px;
 }
 
+.quien_soy_info h1,h2{
+  color: aliceblue;
+  margin: 10px;
+}
+
 .quien_soy_info .btn {
   width: 150px;
-  background-color: rgb(99, 182, 238);;
-  margin-top: 35px;
-  padding: 10px;
+  background-color: rgb(99, 182, 238);
   color: aliceblue;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
   font-size: 16px;
-  transition-duration: 0.4s;
-  cursor: pointer;
 }
 
 .quien_soy_info .btn:hover {
@@ -130,12 +136,16 @@ Estilos Header
   justify-content: flex-start;
 }
 
-.redes {
+.quien_soy_redes .redes {
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding-left: 0px;
+}
+
+.quien_soy_redes .redes li{
+ margin: 0px 5px;
 }
 
 
@@ -184,6 +194,29 @@ Estilos Portfolio
   justify-content: center;
   align-items: center;
 }
+
+.ultimos_trabajos{
+  display: flex;
+  width: 800px;
+  height: 600px;
+}
+
+.ultimos_trabajos img{
+  display: flex;
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+
+.ultimos_trabajos img:hover{
+cursor: crosshair;
+width: 300px;
+opacity: 1;
+filter: contrast(120%);
+}
+
 
 
 /*
