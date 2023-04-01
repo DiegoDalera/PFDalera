@@ -27,7 +27,6 @@ body {
   font-family: golos_regular;
 }
 
-
 /*
 Fin Estilos Globales
 */
@@ -103,12 +102,12 @@ Estilos Header
   align-items: flex-start;
 }
 
-
 .quien_soy_info {
   padding-left: 50px;
 }
 
-.quien_soy_info h1,h2{
+.quien_soy_info h1,
+h2 {
   color: aliceblue;
   margin: 10px;
 }
@@ -124,7 +123,7 @@ Estilos Header
 }
 
 .quien_soy_info .btn:hover {
-  background-color: #008CBA;
+  background-color: #008cba;
   color: white;
 }
 
@@ -144,10 +143,9 @@ Estilos Header
   padding-left: 0px;
 }
 
-.quien_soy_redes .redes li{
- margin: 0px 5px;
+.quien_soy_redes .redes li {
+  margin: 0px 5px;
 }
-
 
 /*
 Estilos Habilidades
@@ -174,7 +172,6 @@ Estilos Habilidades
   background-color: rgb(247, 247, 247);
 }
 
-
 /*
 Estilos Portfolio
 */
@@ -188,36 +185,34 @@ Estilos Portfolio
   margin-top: 60px;
 }
 
-.titulo_texto{
+.titulo_texto {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.ultimos_trabajos{
+.ultimos_trabajos {
   display: flex;
   width: 800px;
   height: 600px;
 }
 
-.ultimos_trabajos img{
+.ultimos_trabajos img {
   display: flex;
   width: 0px;
   flex-grow: 1;
   object-fit: cover;
-  opacity: .8;
-  transition: .5s ease;
+  opacity: 0.8;
+  transition: 0.5s ease;
 }
 
-.ultimos_trabajos img:hover{
-cursor: crosshair;
-width: 300px;
-opacity: 1;
-filter: contrast(120%);
+.ultimos_trabajos img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
 }
-
-
 
 /*
 Estilos Skills
@@ -246,13 +241,11 @@ Estilos Skills
   transition: transform 0.3s;
   display: flex;
   align-items: center;
-
 }
 
-.card i{
+.card i {
   justify-content: center;
 }
-
 
 .card a {
   text-decoration: none;
@@ -276,10 +269,126 @@ Estilos Skills
 }
 
 /*
-Estilos Skills responsive
+Estilos Contacto
 */
 
-@media screen and (max-width: 540px) {
+.contacto {
+  grid-area: contacto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  margin-top: 60px;
+}
+
+.contacto .btn {
+  width: 150px;
+  background-color: rgb(99, 182, 238);
+  margin-top: 35px;
+  padding: 10px;
+  color: aliceblue;
+  font-size: 1rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.contacto .btn:hover {
+  background-color: #008cba;
+  color: white;
+}
+
+/*
+Estilos Footer
+*/
+footer {
+  grid-area: footer;
+  background-color: rgb(99, 182, 238);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenido {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redes_sociales {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.redes_sociales li {
+  margin: 10px;
+}
+
+/*
+Estilos Skills responsive ------------------ index.html
+*/
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "header"
+      "habilidades"
+      "portfolio"
+      "skills"
+      "contacto"
+      "footer";
+    grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+    grid-template-rows: repeat(7);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    background-color: aliceblue;
+  }
+
+  .competencias {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .competencias .mis_competencias {
+    margin: 30px;
+    padding: 30px;
+    background-color: rgb(247, 247, 247);
+  }
+
+  .portfolio {
+    grid-area: portfolio;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .titulo_texto {
+
+  }
+  
+  .ultimos_trabajos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .ultimos_trabajos img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .ultimos_trabajos img:hover {
+ 
+  }
+}
+
+/*@media screen and (max-width: 540px) {
   #container {
     height: auto;
   }
@@ -302,65 +411,7 @@ Estilos Skills responsive
     width: 80%;
   }
 }
-
-/*
-Estilos Contacto
 */
-
-.contacto {
-  grid-area: contacto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 10px;
-  margin-top: 60px;
-}
-
-.contacto .btn {
-  width: 150px;
-  background-color: rgb(99, 182, 238);;
-  margin-top: 35px;
-  padding: 10px;
-  color: aliceblue;
-  font-size: 1rem;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.contacto .btn:hover {
-  background-color: #008CBA;
-  color: white;
-}
-
-/*
-Estilos Footer
-*/
-footer {
-  grid-area: footer;
-  background-color: rgb(99, 182, 238);
-  display: flex;
-  justify-content: space-between;
-}
-
-.contenido{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-.redes_sociales {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-}
-
-.redes_sociales > li {
-  margin: 10px;
-}
-
-
 
 /*
 Estilos del Contacto.Html
@@ -383,7 +434,7 @@ Utilizo otra disposicion del grid que para el index.html
   background-color: aliceblue;
 }
 
-.formulario{
+.formulario {
   grid-area: contacto;
   width: 100%;
   margin-left: auto;
@@ -393,7 +444,7 @@ Utilizo otra disposicion del grid que para el index.html
   justify-content: center;
 }
 
-.contenido_formulario{
+.contenido_formulario {
   width: 80%;
   background: #fff;
   border-radius: 6px;
@@ -404,7 +455,7 @@ Utilizo otra disposicion del grid que para el index.html
   justify-content: space-between;
 }
 
- .contenido_formulario .columna_izq{
+.contenido_formulario .columna_izq {
   width: 25%;
   height: 100%;
   display: flex;
@@ -412,67 +463,67 @@ Utilizo otra disposicion del grid que para el index.html
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  
 }
 
-.contenido_formulario .columna_izq .asunto{
+.contenido_formulario .columna_izq .asunto {
   margin: 10px;
   text-align: center;
 }
 
 .contenido_formulario .columna_izq .direccion,
-.contenido_formulario .columna_izq .telefono,.contenido_formulario .columna_izq .mail{
+.contenido_formulario .columna_izq .telefono,
+.contenido_formulario .columna_izq .mail {
   font-size: 16px;
   color: #010101;
   margin-bottom: 10px;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.contenido_formulario .columna_izq .texto{
+.contenido_formulario .columna_izq .texto {
   font-size: 14px;
   color: #afafb6;
 }
 
-.contenido_formulario .columna_der{
+.contenido_formulario .columna_der {
   width: 75%;
   margin-left: 75px;
 }
-.contenido_formulario .columna_der .titulo{
+.contenido_formulario .columna_der .titulo {
   font-size: 22px;
   font-weight: 600;
   color: #3e2093;
 }
-.contenido_formulario .columna_der .input-box{
+.contenido_formulario .columna_der .input-box {
   height: 50px;
   width: 100%;
   margin: 12px 0;
 }
 .contenido_formulario .columna_der .input-box input,
-.contenido_formulario .columna_der .input-box textarea{
+.contenido_formulario .columna_der .input-box textarea {
   height: 100%;
   width: 100%;
   border: none;
   outline: none;
   font-size: 16px;
-  background: #F0F1F8;
+  background: #f0f1f8;
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
 }
-.contenido_formulario .columna_der .message-box{
+.contenido_formulario .columna_der .message-box {
   min-height: 110px;
 }
-.contenido_formulario .columna_der .input-box textarea{
+.contenido_formulario .columna_der .input-box textarea {
   padding-top: 6px;
 }
-.contenido_formulario .columna_der .button{
+.contenido_formulario .columna_der .button {
   display: inline-block;
   margin-top: 12px;
 }
-.contenido_formulario .columna_der .btn{
+.contenido_formulario .columna_der .btn {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -483,55 +534,52 @@ Utilizo otra disposicion del grid que para el index.html
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.contenido_formulario .columna_der .btn:hover{
+.contenido_formulario .columna_der .btn:hover {
   background: #3d10b7;
 }
-
 
 /*
 responsive formulario 
 */
 
 @media (max-width: 950px) {
-  .container{
+  .container {
     width: 90%;
-    padding: 30px 40px 40px 35px ;
+    padding: 30px 40px 40px 35px;
   }
-  .container .content .right-side{
-   width: 75%;
-   margin-left: 55px;
-}
+  .container .content .right-side {
+    width: 75%;
+    margin-left: 55px;
+  }
 }
 @media (max-width: 820px) {
-  .container{
+  .container {
     margin: 40px 0;
     height: 100%;
   }
-  .container .content{
+  .container .content {
     flex-direction: column-reverse;
   }
- .container .content .left-side{
-   width: 100%;
-   flex-direction: row;
-   margin-top: 40px;
-   justify-content: center;
-   flex-wrap: wrap;
- }
- .container .content .left-side::before{
-   display: none;
- }
- .container .content .right-side{
-   width: 100%;
-   margin-left: 0;
- }
+  .container .content .left-side {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .container .content .left-side::before {
+    display: none;
+  }
+  .container .content .right-side {
+    width: 100%;
+    margin-left: 0;
+  }
 }
-
-
 
 /* Estilos para la pagina de Bolog.html */
 
 /* Utilizo otra disposicion del grid que para el index */
-.wrapper_publicaciones{
+.wrapper_publicaciones {
   display: grid;
   grid-template-areas:
     "nav nav nav nav nav"
@@ -545,17 +593,15 @@ responsive formulario
   background-color: aliceblue;
 }
 
-.publicaciones{
+.publicaciones {
   grid-area: publicaciones;
 }
-
-
 
 /* Estilos para la pagina de proyectos  */
 
 /* Utilizo otra disposicion del grid que para el index */
 
-.wrapper_proyectos{
+.wrapper_proyectos {
   display: grid;
   grid-template-areas:
     "nav nav nav nav nav"
@@ -570,13 +616,12 @@ responsive formulario
   flex-wrap: wrap;
 }
 
-.proyectos{
+.proyectos {
   grid-area: proyectos;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 
 .galeria {
@@ -604,7 +649,7 @@ responsive formulario
 
 /* Utilizo otra disposicion del grid que para el index */
 
-.wrapper_experiencia{
+.wrapper_experiencia {
   display: grid;
   grid-template-areas:
     "nav nav nav nav nav"
@@ -619,44 +664,15 @@ responsive formulario
   flex-wrap: wrap;
 }
 
-.experiencia{
+.experiencia {
   grid-area: experiencia;
   display: flex;
   flex-direction: row;
-  
-  
 }
-
-
-
-
 
 /*
 Estilos Responsive pagina principal
 */
-
-@media screen and (max-width: 50rem) {
-  /* < 50rem */
-
-  .wrapper {
-    display: grid;
-    grid-template-areas:
-      "nav"
-      "hero "
-      "habilidades"
-      "portfolio"
-      "skills"
-      "contacto"
-      "footer";
-    grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-    grid-template-rows: repeat(7);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-
-    background-color: aliceblue;
-  }
-}
-
 
 /* Media querie ccontcato*/
 
