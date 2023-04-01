@@ -93,7 +93,7 @@ Estilos Header
 .header {
   grid-area: header;
   height: 80vh;
-  background-image: url(../img/hero-bg.jpg);
+  background-image: url(../img/portada.jpg);
   background-attachment: fixed;
   background-size: cover;
   display: flex;
@@ -106,13 +106,15 @@ Estilos Header
   padding-left: 50px;
 }
 
-.quien_soy_info h1, h2 {
+.quien_soy_info h1, .quien_soy_info h2 {
   color: aliceblue;
   margin: 10px;
+  margin: 10px 0px;
 }
 
 .quien_soy_info .btn {
   width: 150px;
+  margin: 10px 0px;
   background-color: rgb(99, 182, 238);
   color: aliceblue;
   padding: 5px;
@@ -128,6 +130,7 @@ Estilos Header
 
 .quien_soy_redes {
   padding-left: 50px;
+  margin: 10px 0px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -156,19 +159,38 @@ Estilos Habilidades
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 30px 10px;
-  margin-top: 60px;
+  
 }
 
-.competencias {
+.habilidades .titulo{
+margin: 20px;
+padding: 20px;
+text-align: center;
+}
+
+.habilidades .texto_parrafo{
+  margin: 0px 20px;
+  text-align: center;
+  }
+
+  .habilidades .competencias {
   display: flex;
   justify-content: space-around;
 }
 
-.competencias .mis_competencias {
+.habilidades .competencias .mis_competencias {
   margin: 30px;
   padding: 30px;
   background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.habilidades .competencias .mis_competencias i {
+margin: 20px 0px;
 }
 
 /*
@@ -184,20 +206,21 @@ Estilos Portfolio
   margin-top: 60px;
 }
 
-.titulo_texto {
+.portfolio .titulo_texto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 20px 0px;
 }
 
-.ultimos_trabajos {
+.portfolio .ultimos_trabajos {
   display: flex;
-  width: 800px;
-  height: 600px;
+  width: 90%;
+  height: 400px;
 }
 
-.ultimos_trabajos img {
+.portfolio .ultimos_trabajos img {
   display: flex;
   width: 0px;
   flex-grow: 1;
@@ -206,7 +229,7 @@ Estilos Portfolio
   transition: 0.5s ease;
 }
 
-.ultimos_trabajos img:hover {
+.portfolio .ultimos_trabajos img:hover {
   cursor: crosshair;
   width: 300px;
   opacity: 1;
@@ -216,13 +239,19 @@ Estilos Portfolio
 /*
 Estilos Skills
 */
+
 .skills {
   grid-area: skills;
   background-color: rgb(213, 244, 253);
+  color: #010101;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.skills .texto{
+  margin: 20px 0px;
 }
 
 .cards {
@@ -242,15 +271,18 @@ Estilos Skills
   align-items: center;
 }
 
-.card i {
-  justify-content: center;
-}
-
 .card a {
   text-decoration: none;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.card i {
+  justify-content: center;
+  margin: 20px 0px;
+}
 .card_titulo {
   margin: 5px 0;
   font-size: 1.25rem;
