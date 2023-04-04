@@ -1,0 +1,93 @@
+/*
+Estilos paginas boostrap
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: golos_regular;
+    src: url(../fonts/GolosText-Regular.ttf);
+  }
+  
+  a {
+    color: aliceblue;
+    text-decoration: none;
+  }
+  
+  i {
+    font-size: 1.5em;
+  }
+  
+  body {
+    background-color: aliceblue;
+    font-family: golos_regular;
+  }
+
+/*
+Estilos Blog.html
+*/
+
+
+/*
+Estilos Barra de navegacion
+*/
+.navbar {
+    grid-area: nav;
+    background-color: rgb(99, 182, 238);
+  
+    position: sticky;
+    top: 0px;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  
+    z-index: 100;
+  }
+  
+  ul.menu {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-self: end;
+  }
+  
+  .menu li {
+    padding: 5px;
+  }
+
+
+
+  /*
+Estilos Footer
+*/
+
+.footer{
+    background-color: rgb(99, 182, 238);
+}
+
+.footer .copy{
+
+}
+
+ .redes_sociales {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  
+  .redes_sociales li {
+    margin: 10px;
+  }
+
+
+  /*
+Estilos Experiencia.html
+*/
+
