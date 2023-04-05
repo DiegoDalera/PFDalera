@@ -35,19 +35,15 @@ Estilos Blog.html
 /*
 Estilos Barra de navegacion
 */
-.navbar {
-    grid-area: nav;
-    background-color: rgb(99, 182, 238);
-  
-    position: sticky;
-    top: 0px;
-  
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  
-    z-index: 100;
-  }
+nav{
+  background-color: rgb(99, 182, 238);
+  display: flex;
+  justify-content: end;
+  padding-top: 0.5rem;
+
+
+
+}
   
   ul.menu {
     margin: 0px;
@@ -61,19 +57,50 @@ Estilos Barra de navegacion
     padding: 5px;
   }
 
+  /*
+Estilos Bolg
+*/
 
+.img_blog{
+
+  border-radius: 50px;
+  width: 200px;
+  height: 200px;
+  margin: 10px 0px;
+  
+}
+
+.titulo{
+margin: 30px;
+}
+
+.noticia{
+  margin: 30px;
+
+
+}
 
   /*
 Estilos Footer
 */
 
-.footer{
+footer{
     background-color: rgb(99, 182, 238);
 }
 
-.footer .copy{
+.copy{
+  align-items: center;
+  justify-content: center;
 
-}
+  }
+
+  .copy_col{
+    align-items: center;
+    justify-content: center;
+  
+    }
+
+
 
  .redes_sociales {
     list-style: none;
