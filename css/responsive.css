@@ -48,20 +48,24 @@ Estilos Responsive Index.html
 
   /* responsive competencias*/
 
-
+  @media screen and (max-width: 576px) {
   .competencias {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
-  .competencias .mis_competencias {
-    margin: 30px;
-    padding: 30px;
+  .habilidades .competencias .mis_competencias {
+    width:100%;
+    margin: 20px 0px;
+    padding: 0px;
     background-color: rgb(247, 247, 247);
   }
+}
+  
 
     /* responsive portfolio */
-
+  @media screen and (max-width: 576px) {
   .portfolio {
     grid-area: portfolio;
     display: flex;
@@ -70,20 +74,48 @@ Estilos Responsive Index.html
     align-items: center;
   }
 
-  .ultimos_trabajos {
+  .portfolio .ultimos_trabajos {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    height: auto;
   }
 
-  .ultimos_trabajos img {
-    width: 300px;
-    height: 300px;
-  }
 
+  .portfolio .ultimos_trabajos img {
+    width: 90%;
+    
+  }
 
 }
+
+  /* responsive mis skills */
+
+  @media screen and (max-width: 576px) {
+
+    .skills .texto{
+      margin: 20px 0px;
+    }
+    
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+    .card {
+      width: 95%;
+      padding: 15px;
+      margin: 15px;
+      background-color: #fff;
+      border-radius: 3px;
+      transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+    }  
+  }
+
 
 
 

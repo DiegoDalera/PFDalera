@@ -3,7 +3,7 @@ Estilos paginas boostrap
 */
 
 * {
-    margin: 0;
+    margin: 0 ;
     padding: 0;
     box-sizing: border-box;
   }
@@ -25,11 +25,19 @@ Estilos paginas boostrap
   body {
     background-color: aliceblue;
     font-family: golos_regular;
+   
+  }
+
+  .resetear_margenes{
+    margin: 0px !important;
+    padding: 0px !important;
+
   }
 
 /*
 Estilos Blog.html
 */
+
 
 /*
 Estilos Barra de navegacion
@@ -38,9 +46,6 @@ Estilos Barra de navegacion
 .nav{
 
   background-color: rgb(99, 182, 238);
-
-  position: sticky;
-  top: 0px;
 
   display: flex;
   flex-direction: row;
@@ -51,11 +56,6 @@ Estilos Barra de navegacion
   overflow: hidden;
 
 }
-
-.topnav{
-
-}
-
 
 .topnav a {
   float: left;
@@ -79,6 +79,14 @@ Estilos Barra de navegacion
 
 .topnav .icon {
   display: none;
+}
+
+/*
+la clase reset la uso para resetear a 0 un padding que viene con el boostrap y que no me dejaba hacerlo responsive 100%
+*/
+.reset{
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
 @media screen and (max-width: 600px) {
@@ -173,8 +181,4 @@ Estilos Experiencia.html
 
 .progress{
   height: 10px;
-}
-
-.container{
-  padding: 60px 0px;
 }

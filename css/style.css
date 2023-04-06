@@ -105,8 +105,6 @@ Estilos Barra de navegacion
 }
 
 
-
-
 /*
 Estilos Header
 */
@@ -244,7 +242,7 @@ Estilos Portfolio
 
 .portfolio .ultimos_trabajos img {
   display: flex;
-  width: 0px;
+  width: 10px;
   flex-grow: 1;
   object-fit: cover;
   opacity: 0.8;
