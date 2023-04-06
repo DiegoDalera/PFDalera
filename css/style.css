@@ -32,9 +32,11 @@ Fin Estilos Globales
 */
 
 
+
 /*
 Estilos Index.html
 */
+
 /*
 Disposicion del Grid
 */
@@ -77,11 +79,8 @@ Estilos Barra de navegacion
   overflow: hidden;
 
 }
-.topnav {
 
-}
-
-.topnav a {
+ .topnav a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -97,61 +96,16 @@ Estilos Barra de navegacion
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #008cba;
   color: white;
 }
 
-.topnav .icon {
+ .topnav .icon {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
 
-/* .navbar {
-  grid-area: nav;
-  background-color: rgb(99, 182, 238);
-
-  position: sticky;
-  top: 0px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-
-  z-index: 100;
-}
-
-ul.menu {
-  margin: 0px;
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-self: end;
-}
-
-.menu li {
-  padding: 5px;
-} */
 
 /*
 Estilos Header
@@ -426,10 +380,10 @@ footer {
 
 
 /*
-Estilos del Contacto.Html
+Estilos del Contacto.Html--------------------------------
 
 Disposicion del Grid
-Utilizo otra disposicion del grid que para el index.html 
+Utilizo otra disposicion del grid distinta al index.html 
 */
 
 .wrapper_contacto {
@@ -457,10 +411,10 @@ Utilizo otra disposicion del grid que para el index.html
 }
 
 .contenido_formulario {
-  width: 80%;
+  width: 70%;
   background: #fff;
   border-radius: 6px;
-  padding: 20px 60px 30px 40px;
+  padding: 20px 50px 20px 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
@@ -485,8 +439,8 @@ Utilizo otra disposicion del grid que para el index.html
 .contenido_formulario .columna_izq .direccion,
 .contenido_formulario .columna_izq .telefono,
 .contenido_formulario .columna_izq .mail {
-  font-size: 16px;
-  color: #010101;
+  font-size: 14px;
+  color:#212529;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -508,6 +462,15 @@ Utilizo otra disposicion del grid que para el index.html
   font-weight: 600;
   color: #3e2093;
 }
+
+.contenido_formulario .columna_der .parrafo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #212529;
+  font-weight: 100;
+  
+}
+
 .contenido_formulario .columna_der .input-box {
   height: 50px;
   width: 100%;
@@ -534,6 +497,7 @@ Utilizo otra disposicion del grid que para el index.html
 .contenido_formulario .columna_der .button {
   display: inline-block;
   margin-top: 12px;
+  
 }
 .contenido_formulario .columna_der .btn {
   color: #fff;
@@ -542,20 +506,19 @@ Utilizo otra disposicion del grid que para el index.html
   border: none;
   padding: 10px;
   border-radius: 6px;
-  background: #543f8e;
+  background-color: rgb(99, 182, 238);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .contenido_formulario .columna_der .btn:hover {
-  background: #3d10b7;
+  background-color: #008cba;
 }
 
 
 
 /* Estilos para la pagina de Bolog.html */
-
 /* Utilizo otra disposicion del grid que para el index */
-
+/* 
 .wrapper_publicaciones {
   display: grid;
   grid-template-areas:
@@ -569,10 +532,10 @@ Utilizo otra disposicion del grid que para el index.html
 
   background-color: aliceblue;
 }
-
 .publicaciones {
   grid-area: publicaciones;
-}
+} */
+
 
 /* Estilos para la pagina de Proyectos  */
 
@@ -593,24 +556,35 @@ Utilizo otra disposicion del grid que para el index.html
   flex-wrap: wrap;
 }
 
+
 .proyectos {
   grid-area: proyectos;
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.proyectos .titulo_proyectos{
+  margin: 20px 0px;
+}
+
+.galerias{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
 .galeria {
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
-  width: 25%;
+  width: 30%;
 
 
 }
-
-
 
 .galeria img {
   width: 100%;
@@ -619,8 +593,7 @@ Utilizo otra disposicion del grid que para el index.html
 }
 
 .galeria img:hover {
-
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .descripcion {
@@ -630,8 +603,11 @@ Utilizo otra disposicion del grid que para el index.html
 
 /* Estilos para la pagina de Experiencia  */
 
-/* Utilizo otra disposicion del grid que para el index */
 
+
+
+/* Utilizo otra disposicion del grid que para el index */
+/* 
 .wrapper_experiencia {
   display: grid;
   grid-template-areas:
@@ -652,4 +628,4 @@ Utilizo otra disposicion del grid que para el index.html
   display: flex;
   flex-direction: row;
 }
-
+ */
