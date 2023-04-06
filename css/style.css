@@ -2,6 +2,18 @@
 Estilos Globales
 */
 
+/*
+colores des sitio
+*/
+:root {
+  --blue: #3A98B9;
+  --blue_hover:#2a6c85;
+  --cream:#FFF1DC;
+  --brown:#E8D5C4;
+  --white: #EEEEEE;
+  --black:rgb(0,0,0,0.9);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +26,7 @@ Estilos Globales
 }
 
 a {
-  color: aliceblue;
+  color:var(--white);
   text-decoration: none;
 }
 
@@ -23,7 +35,7 @@ i {
 }
 
 body {
-  background-color: aliceblue;
+  background-color:var(--cream);
   font-family: golos_regular;
 }
 
@@ -56,7 +68,6 @@ Disposicion del Grid
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 
-  background-color: aliceblue;
 }
 
 /*
@@ -65,25 +76,20 @@ Estilos Barra de navegacion
 
 .nav{
   grid-area: nav;
-  background-color: rgb(99, 182, 238);
-
+  background-color:var(--blue);
   position: sticky;
   top: 0px;
-
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
   z-index: 100;
-
   overflow: hidden;
-
 }
 
  .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: var(--white);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -91,13 +97,13 @@ Estilos Barra de navegacion
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color:var(--blue_hover);
   color: black;
 }
 
 .topnav a.active {
-  background-color: #008cba;
-  color: white;
+  background-color:var(--blue_hover);
+  color:var(--white);
 }
 
  .topnav .icon {
@@ -119,6 +125,7 @@ Estilos Header
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin: 30px 0px;
 }
 
 .quien_soy_info {
@@ -126,7 +133,7 @@ Estilos Header
 }
 
 .quien_soy_info h1, .quien_soy_info h2 {
-  color: aliceblue;
+  color: var(--white);
   margin: 10px;
   margin: 10px 0px;
 }
@@ -134,8 +141,8 @@ Estilos Header
 .quien_soy_info .btn {
   width: 150px;
   margin: 10px 0px;
-  background-color: rgb(99, 182, 238);
-  color: aliceblue;
+  background-color:var(--blue);
+  color: var(--white);
   padding: 5px;
   text-align: center;
   display: inline-block;
@@ -143,8 +150,8 @@ Estilos Header
 }
 
 .quien_soy_info .btn:hover {
-  background-color: #008cba;
-  color: white;
+  background-color:var(--blue_hover);
+  color: var(--white);
 }
 
 .quien_soy_redes {
@@ -174,18 +181,18 @@ Estilos Habilidades
 
 .habilidades {
   grid-area: habilidades;
-  background-color: rgb(226, 245, 250);
+  background-color: var(--brown);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 10px;
+  padding: 20px 10px;
   
 }
 
 .habilidades .titulo{
-margin: 20px;
-padding: 20px;
+margin: 10px;
+padding: 10px;
 text-align: center;
 }
 
@@ -203,7 +210,7 @@ text-align: center;
   width: 33%;
   margin: 30px;
   padding: 30px;
-  background-color: rgb(247, 247, 247);
+  background-color:var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,7 +230,7 @@ Estilos Portfolio
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .portfolio .titulo_texto {
@@ -231,13 +238,14 @@ Estilos Portfolio
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px 0px;
+  margin: 10px 0px 20px 0px;
 }
 
 .portfolio .ultimos_trabajos {
   display: flex;
   width: 90%;
   height: 400px;
+  margin-bottom: 30px;
 }
 
 .portfolio .ultimos_trabajos img {
@@ -257,17 +265,18 @@ Estilos Portfolio
 }
 
 /*
-Estilos Skills
+Estilos Mis Skills
 */
 
 .skills {
   grid-area: skills;
-  background-color: rgb(213, 244, 253);
-  color: #010101;
+  background-color: var(--brown);
+  color:var(--black);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px ;
 }
 
 .skills .texto{
@@ -284,7 +293,7 @@ Estilos Skills
   width: 30%;
   padding: 15px;
   margin: 15px;
-  background-color: #fff;
+  background-color:var(--white);
   border-radius: 3px;
   transition: transform 0.3s;
   display: flex;
@@ -293,7 +302,7 @@ Estilos Skills
 
 .card a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,23 +338,22 @@ Estilos Contacto
   flex-direction: column;
   align-items: center;
   padding: 30px 10px;
-  margin-top: 60px;
 }
 
 .contacto .btn {
   width: 150px;
-  background-color: rgb(99, 182, 238);
+  background-color: var(--blue);
   margin-top: 35px;
   padding: 10px;
-  color: aliceblue;
+  color: var(--white);
   font-size: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
 .contacto .btn:hover {
-  background-color: #008cba;
-  color: white;
+  background-color:var(--blue_hover);
+  color: var(--white);
 }
 
 /*
@@ -353,7 +361,7 @@ Estilos Footer
 */
 footer {
   grid-area: footer;
-  background-color: rgb(99, 182, 238);
+  background-color: var(--blue);
   display: flex;
   justify-content: space-between;
 }
@@ -376,12 +384,11 @@ footer {
 }
 
 
-
 /*
-Estilos del Contacto.Html--------------------------------
+Estilos de la pagina Contacto.Html
 
 Disposicion del Grid
-Utilizo otra disposicion del grid distinta al index.html 
+Utilizo otra disposicion del grid distinta al Index.html 
 */
 
 .wrapper_contacto {
@@ -394,8 +401,6 @@ Utilizo otra disposicion del grid distinta al index.html
   grid-template-rows: repeat(3);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-
-  background-color: aliceblue;
 }
 
 .formulario {
@@ -410,10 +415,10 @@ Utilizo otra disposicion del grid distinta al index.html
 
 .contenido_formulario {
   width: 70%;
-  background: #fff;
+  background-color:rgb(255, 253, 253);
   border-radius: 6px;
   padding: 20px 50px 20px 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(129, 128, 128, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -438,7 +443,7 @@ Utilizo otra disposicion del grid distinta al index.html
 .contenido_formulario .columna_izq .telefono,
 .contenido_formulario .columna_izq .mail {
   font-size: 14px;
-  color:#212529;
+  color:var(--black);
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -458,13 +463,13 @@ Utilizo otra disposicion del grid distinta al index.html
 .contenido_formulario .columna_der .titulo {
   font-size: 22px;
   font-weight: 600;
-  color: #3e2093;
+  color: var(--black);
 }
 
 .contenido_formulario .columna_der .parrafo {
   font-size: 14px;
   font-weight: 600;
-  color: #212529;
+  color: var(--black);
   font-weight: 100;
   
 }
@@ -481,7 +486,7 @@ Utilizo otra disposicion del grid distinta al index.html
   border: none;
   outline: none;
   font-size: 16px;
-  background: #f0f1f8;
+  background: var(--white);
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
@@ -498,18 +503,18 @@ Utilizo otra disposicion del grid distinta al index.html
   
 }
 .contenido_formulario .columna_der .btn {
-  color: #fff;
+  color: var(--white);
   font-size: 18px;
   outline: none;
   border: none;
   padding: 10px;
   border-radius: 6px;
-  background-color: rgb(99, 182, 238);
+  background-color: var(--blue);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .contenido_formulario .columna_der .btn:hover {
-  background-color: #008cba;
+  background-color: var(--blue_hover);
 }
 
 
@@ -550,7 +555,6 @@ Utilizo otra disposicion del grid distinta al index.html
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 
-  background-color: aliceblue;
   flex-wrap: wrap;
 }
 
@@ -600,9 +604,6 @@ Utilizo otra disposicion del grid distinta al index.html
 }
 
 /* Estilos para la pagina de Experiencia  */
-
-
-
 
 /* Utilizo otra disposicion del grid que para el index */
 /* 
