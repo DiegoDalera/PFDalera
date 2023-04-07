@@ -22,6 +22,8 @@ Estilos Responsive Index.html
     background-color: aliceblue;
   }
 
+}
+
   /* responsive barra navegacion */
 
 @media screen and (max-width: 600px) {
@@ -46,7 +48,7 @@ Estilos Responsive Index.html
   }
 }
 
-  /* responsive competencias*/
+  /* Responsive Competencias*/
 
   @media screen and (max-width: 576px) {
   .competencias {
@@ -64,7 +66,7 @@ Estilos Responsive Index.html
 }
   
 
-    /* responsive portfolio */
+    /* Responsive Portfolio */
   @media screen and (max-width: 576px) {
   .portfolio {
     grid-area: portfolio;
@@ -90,9 +92,37 @@ Estilos Responsive Index.html
 
 }
 
-  /* responsive mis skills */
+  /* Responsive mis Skills  para tablet*/
 
-  @media screen and (max-width: 576px) {
+
+  @media only screen and (min-width: 577px) and (max-width: 999px){
+
+    .skills .texto{
+      margin: 20px 0px;
+    }
+    
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+    .card {
+      width: 85%;
+      padding: 10px;
+      margin: 10px;
+      background-color: var(--white);
+      border-radius: 3px;
+      transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+    }  
+  }
+
+
+/* Responsive mis Skills para movile */
+
+@media only screen and (min-width: 1px) and (max-width: 576px){
 
     .skills .texto{
       margin: 20px 0px;
@@ -108,7 +138,7 @@ Estilos Responsive Index.html
       width: 95%;
       padding: 15px;
       margin: 15px;
-      background-color: #fff;
+      background-color:var(--white);
       border-radius: 3px;
       transition: transform 0.3s;
       display: flex;
@@ -117,10 +147,56 @@ Estilos Responsive Index.html
   }
 
 
+/*
+  Estilos Responsive Proyectos.html para Tablet
+  */
+
+
+  @media only screen and (min-width: 577px) and (max-width: 767px){
+    .wrapper_proyectos {
+      display: grid;
+      grid-template-areas:
+        "nav"
+        "proyectos"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+  
+      background-color: var(--white)
+    }
+  
+    .proyectos {
+      grid-area: proyectos;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .proyectos .galeria {
+      width: 45%;
+    }
+  
+    .footer .contenido{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .footer .contenido .redes_sociales{
+      display: flex;
+      flex-direction:row;
+    }
+
+  }
 
 
 /*
-  Estilos Responsive Proyectos.html
+  Estilos Responsive Proyectos.html para Mobile
   */
 
 @media screen and (max-width: 576px) {
@@ -203,11 +279,17 @@ Estilos Responsive Index.html
     }
   }
 
+
+
 /*
   Estilos Responsive Contacto.html
   */
 
-  @media screen and (max-width: 576px) {
+  /*
+  uso 900 px solo para el formulario porque es donde el diseño comun para grandes pantallas empieza a verse mal
+  */
+
+  @media screen and (max-width: 900px) {
     .wrapper_contacto {
       display: grid;
       grid-template-areas:
@@ -288,4 +370,3 @@ Estilos Responsive Index.html
     }
   }
 
-}
