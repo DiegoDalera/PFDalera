@@ -92,7 +92,7 @@ Estilos Responsive Index.html
 
 }
 
-  /* Responsive mis Skills  para tablet*/
+  /* Responsive mis Skills para tablet*/
 
 
   @media only screen and (min-width: 576px) and (max-width: 999px){
@@ -304,9 +304,7 @@ Estilos Responsive Index.html
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3);
       grid-column-gap: 10px;
-      grid-row-gap: 10px;
-  
-      background-color: aliceblue;
+      grid-row-gap: 10px;;
     }
   
     .formulario {
