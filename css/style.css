@@ -10,7 +10,7 @@ colores des sitio
   --blue_hover:#2a6c85;
   --cream:#FFF1DC;
   --brown:#E8D5C4;
-  --white: #EEEEEE;
+  --white: #f5f3f3;
   --black:rgb(0,0,0,0.9);
 }
 
@@ -204,7 +204,10 @@ text-align: center;
   .habilidades .competencias {
   display: flex;
   justify-content: space-around;
+  
 }
+
+
 
 .habilidades .competencias .mis_competencias {
   width: 33%;
@@ -214,7 +217,18 @@ text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.4s;
+
 }
+
+.habilidades .competencias .mis_competencias:hover {
+  box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
+  transform: translateY(-5px);
+}
+
+.habilidades .competencias .mis_competencias p {
+  text-align: center;
+  }
 
 .habilidades .competencias .mis_competencias i {
 margin: 20px 0px;
@@ -230,7 +244,6 @@ Estilos Portfolio
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .portfolio .titulo_texto {
@@ -280,7 +293,7 @@ Estilos Mis Skills
 }
 
 .skills .texto{
-  margin: 20px 0px;
+  margin: 30px 0px;
 }
 
 .cards {
@@ -295,7 +308,7 @@ Estilos Mis Skills
   margin: 15px;
   background-color:var(--white);
   border-radius: 3px;
-  transition: transform 0.3s;
+  transition: transform 0.4s;
   display: flex;
   align-items: center;
 }
@@ -325,7 +338,7 @@ Estilos Mis Skills
 }
 .card:hover {
   box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
-  transform: translateY(-6px);
+  transform: translateY(-5px);
 }
 
 /*
@@ -349,15 +362,22 @@ Estilos Contacto
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
+}
 
+.contacto .titulo_contacto {
+  margin: 10px;
 
+}
+
+.contacto .parrafo_contacto {
+  margin: 10px;
 
 }
 
 .contacto .btn {
   width: 150px;
   background-color: var(--blue);
-  margin-top: 35px;
+  margin: 10px;
   padding: 10px;
   color: var(--white);
   font-size: 1rem;
@@ -428,7 +448,7 @@ Utilizo otra disposicion del grid distinta al Index.html
 }
 
 .contenido_formulario {
-  width: 70%;
+  width: 80%;
   background-color:rgb(255, 253, 253);
   border-radius: 6px;
   padding: 20px 50px 20px 30px;
@@ -477,6 +497,7 @@ Utilizo otra disposicion del grid distinta al Index.html
 .contenido_formulario .columna_der .titulo {
   font-size: 22px;
   font-weight: 600;
+  margin: 10px 0px;
   color: var(--black);
 }
 
@@ -576,9 +597,8 @@ Utilizo otra disposicion del grid distinta al Index.html
   border: 1px solid #ccc;
   float: left;
   width: 30%;
-  
-
-
+  box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
+  background-color: var(--white);
 }
 
 .galeria img {
@@ -589,7 +609,8 @@ Utilizo otra disposicion del grid distinta al Index.html
 }
 
 .galeria img:hover {
-  transform: scale(0.9);
+  
+  transform: translateY(-5px);
 }
 
 .descripcion {
