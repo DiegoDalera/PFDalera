@@ -3,7 +3,7 @@ Estilos Globales
 */
 
 /*
-colores des sitio
+Variables colores del  sitio
 */
 :root {
   --blue: #3A98B9;
@@ -39,15 +39,11 @@ body {
   font-family: golos_regular;
 }
 
-/*
-Fin Estilos Globales
-*/
+/* Fin Estilos Globales */
 
 
 
-/*
-Estilos Index.html
-*/
+/* Estilos Index.html */
 
 /*
 Disposicion del Grid
@@ -207,8 +203,6 @@ text-align: center;
   
 }
 
-
-
 .habilidades .competencias .mis_competencias {
   width: 33%;
   margin: 30px;
@@ -366,12 +360,10 @@ Estilos Contacto
 
 .contacto .titulo_contacto {
   margin: 10px;
-
 }
 
 .contacto .parrafo_contacto {
   margin: 10px;
-
 }
 
 .contacto .btn {
@@ -532,7 +524,7 @@ Utilizo otra disposicion del grid distinta al Index.html
 .contenido_formulario .columna_der .input-box textarea {
   padding-top: 6px;
 }
-.contenido_formulario .columna_der .button {
+.contenido_formulario .columna_der .boton {
   display: inline-block;
   margin-top: 12px;
   

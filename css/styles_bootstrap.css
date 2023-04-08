@@ -1,17 +1,15 @@
-/*
-Estilos paginas hechas con boostrap ( experiencia.html y blog.html)
-*/
+/*  Estilos paginas hechas con boostrap ( Experiencia.html y Blog.html) */
 
 /*
-colores del sitio
+Variables Colores del sitio las mismas que las otras paginas 
 */
 :root {
-  --blue: #3A98B9;
-  --blue_hover:#2a6c85;
-  --cream:#FFF1DC;
-  --brown:#E8D5C4;
-  --white: #EEEEEE;
-  --black:rgb(0,0,0,0.9);
+  --blue: #3a98b9;
+  --blue_hover: #2a6c85;
+  --cream: #fff1dc;
+  --brown: #e8d5c4;
+  --white: #eeeeee;
+  --black: rgb(0, 0, 0, 0.9);
 }
 
 /*
@@ -19,51 +17,47 @@ Estlos globales
 */
 
 * {
-    margin: 0 ;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  @font-face {
-    font-family: golos_regular;
-    src: url(../fonts/GolosText-Regular.ttf);
-  }
-  
-  a {
-    color:var(--white);
-    text-decoration: none;
-  }
-  
-  i {
-    font-size: 1.5em;
-  }
-  
-  body {
-    background-color: var(--cream);
-    font-family: golos_regular;
-   
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: golos_regular;
+  src: url(../fonts/GolosText-Regular.ttf);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+i {
+  font-size: 1.5em;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: golos_regular;
+}
 
 /*
 la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap y que no me dejaba hacerlo responsive 100%
 */
-.reset{
+.reset {
   margin-left: 0px !important;
   margin-right: 0px !important;
   padding-left: 0px !important;
-  padding-right:0px !important;
+  padding-right: 0px !important;
 }
 
-
-/*
-Estilos Blog.html
-*/
+/*  Estilos Blog.html */
 
 /*
  Barra de Navegacion
 */
 
-.nav{
+.nav {
   background-color: var(--blue);
   display: flex;
   flex-direction: row;
@@ -96,12 +90,14 @@ Estilos Blog.html
   display: none;
 }
 
- /*
-Media querie para el  menu hambuerguesa
+/*
+Media query para el menu hambuerguesa
 */
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -109,7 +105,9 @@ Media querie para el  menu hambuerguesa
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -122,94 +120,103 @@ Media querie para el  menu hambuerguesa
   }
 }
 
-
-  /*
+/*
 Estilos Noticias del blog
 */
 
-.img_blog{
+.img_blog {
   border-radius: 50px;
   width: 200px;
   height: 200px;
   margin: 10px 0px;
 }
 
-.titulo{
-margin: 30px;
-}
-
-.noticia{
+.titulo {
   margin: 30px;
 }
 
-.articulo{
+.noticia {
+  margin: 30px;
+}
+
+.articulo {
   text-align: justify;
 }
 
-.padding_blog{
-  padding: 30px !important;
+.padding_blog {
+  padding: 30px !important; /* para resetear un contenedor que impedia el responsive */
 }
 
-
-  /*
+/*
 Estilos Footer
 */
 
-footer{
-    background-color: var(--blue);
+footer {
+  background-color: var(--blue);
 }
 
-.copy{
+.copy {
   align-items: center;
   justify-content: center;
+}
 
+.copy_col {
+  align-items: center;
+  justify-content: center;
+}
+
+.redes_sociales {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.redes_sociales li {
+  margin: 10px;
+}
+
+/*
+Responsive de footer 
+*/
+@media screen and (max-width: 992px) {
+  .alinear_copy_v {
+    display: flex;
+    flex-direction: column;
   }
 
-  .copy_col{
+  .alinear_redes {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  
-    }
-
- .redes_sociales {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
   }
-  
-  .redes_sociales li {
-    margin: 10px;
-  }
+}
 
-
-
-  
-  /*
+/*
 Estilos Experiencia.html
 */
 
-.titulo_exp{
+.titulo_exp {
   margin: 30px 0px;
-  }
-
-.contenedor_barras{
-  margin: 30px 0px;
-
 }
-.skill{
+
+.contenedor_barras {
+  margin: 30px 0px;
+}
+.skill {
   margin: 1rem 0rem;
 }
 
-.alinear_copy_v{
+.alinear_copy_v {
   display: flex;
   align-items: center;
 }
 
-.progress{
+.progress {
   height: 10px;
 }
 
-.padding_exp{
+.padding_exp {
   padding: 30px !important;
 }
