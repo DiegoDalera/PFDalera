@@ -17,6 +17,108 @@
   <script src="/js/script.js"></script>
 
   <title>Diego Dalera Lic. En educacion & Web Devoloper</title>
+
+  <style>
+
+    .blog-post {
+      -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+    }
+
+    .blog-post .blog-img .overlay,
+    .blog-post .blog-img .post-meta {
+      position: absolute;
+      opacity: 0;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    .blog-post .blog-img .overlay {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .blog-post .blog-img .post-meta {
+      bottom: 5%;
+      right: 5%;
+      z-index: 1;
+    }
+
+    .blog-post .blog-img .post-meta .read-more:hover {
+      color: #6dc77a !important;
+    }
+
+
+    .blog-post .content .title {
+      font-size: 18px;
+    }
+
+    .blog-post .content .title:hover {
+      color: #6dc77a !important;
+    }
+
+    .blog-post .content .author .name:hover {
+      color: #6dc77a !important;
+    }
+
+    .blog-post:hover {
+      -webkit-transform: translateY(-7px);
+      transform: translateY(-7px);
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-post:hover .blog-img .overlay {
+      opacity: 0.65;
+    }
+
+    .blog-post:hover .blog-img .post-meta {
+      opacity: 1;
+    }
+
+    .blog-post .post-meta .like i,
+    .profile-post .like i {
+      -webkit-text-stroke: 2px #dd2427;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .blog-post .post-meta .like:active i,
+    .blog-post .post-meta .like:focus i,
+    .profile-post .like:active i,
+    .profile-post .like:focus i {
+      -webkit-text-stroke: 0px #dd2427;
+      -webkit-text-fill-color: #dd2427;
+    }
+
+    .avatar.avatar-ex-sm {
+      height: 36px;
+    }
+
+    .shadow {
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .text-muted {
+      color: #8492a6 !important;
+    }
+
+
+    .para-desc {
+      max-width: 600px;
+    }
+
+    .text-muted {
+      color: #8492a6 !important;
+    }
+
+    .section-title .title {
+      letter-spacing: 0.5px;
+      font-size: 30px;
+    }
+  </style>
 </head>
 
 <body>
@@ -46,84 +148,207 @@
 
   <main class="container padding_blog">
 
-    <div class="row reset">
-      <div class="titulo col-lg-12 reset">
+    <div class="container mt-100 mt-60">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title mb-4 pb-2">
+            <h4 class="title mb-4">Ultimas Entradas &amp; Noticias</h4>
+            <p class="text-muted para-desc mx-auto mb-0">Build responsive, mobile-first projects on the web with the
+              world's most popular front-end component library.</p>
+          </div>
+        </div><!--end col-->
+      </div><!--end row-->
 
-        <h1 class="titulo_texto text-center">Noticias sobre el mundo de la programacion </h1>
-      </div>
-    </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mt-4 pt-2">
+          <div class="blog-post rounded border">
+            <div class="blog-img d-block overflow-hidden position-relative">
+              <img src="../img/blog/programacion.jpg" class="img-fluid rounded-top" alt="">
+              <div class="overlay rounded-top bg-dark"></div>
+              <div class="post-meta">
+                <a href="javascript:void(0)" class="text-light d-block text-right like"><i class="mdi mdi-heart"></i>
+                  33</a>
+                <a href="javascript:void(0)" class="text-light read-more">Leer Mas <i
+                    class="mdi mdi-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="content p-3">
+              <small class="text-muted p float-right">19th Oct, 19</small>
+              <small><a href="javascript:void(0)" class="text-primary">Programacion</a></small>
+              <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">5 sitios para aprender a programar</a></h4>
+              <p class="text-muted mt-2"> Sin lugar a dudas la práctica hace al maestro, esto en programación es mucho más, por eso hoy hablaremos de
+                5 sitios para practicar ejercicios de programación y mejorar considerablemente nuestra lógica de
+                programación, ¿Ya utilizas alguno? ¿Tienes otro sitio en mente?</p>
+              <div class="pt-3 mt-3 border-top d-flex">
+                <img src="../img/profile_pic.png"
+                  class="img-fluid avatar avatar-ex-sm rounded-pill mr-3 shadow" alt="">
+                <div class="author mt-2">
+                  <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Diego Dalera</a></h6>
+                </div>
+              </div>
+            </div>
+          </div><!--end blog post-->
+        </div><!--end col-->
 
-    <div class="row reset">
-      <div class="col-sm-12 col-md-12 col-lg-12 noticia reset">
-        <h2>8 Beneficios de ser Desarrollador Web</h2>
-        <img src="../img/blog/desarrollador_web.webp" alt="post img" class="img_blog" />
-        <article>
-          <p class="articulo">
-            Desde la innovación de las computadoras y el nacimiento de Internet, la tecnología está cambiando vidas. Con
-            el rápido crecimiento de los teléfonos inteligentes, el desarrollo de dispositivos y el creciente alcance de
-            la tecnología en la vida cotidiana, el desarrollo web es uno de los campos más atractivos de la industria
-            tecnológica. Y ser desarrollador es uno de los trabajos más atractivos y rentables en 2023. Es por eso que
-            compilamos una lista de los 8 beneficios principales de ser un desarrollador web en el mundo actual. Pero
-            primero, ¿qué es el desarrollo web?
-          </p>
-        </article>
-        <a class="btn btn-blog pull-right marginBottom10"
-          href="https://www.codingdojo.la/2023/03/09/8-beneficios-de-ser-desarrollador-web-2/" target="_blank">LEER
-          MAS</a>
-      </div>
+        <div class="col-lg-4 col-md-6 mt-4 pt-2">
+          <div class="blog-post rounded border">
+            <div class="blog-img d-block overflow-hidden position-relative">
+              <img src="/img/blog/desarrollador_web.webp" class="img-fluid rounded-top" alt="" height="280px" width="350px">
+              <div class="overlay rounded-top bg-dark"></div>
+              <div class="post-meta">
+                <a href="javascript:void(0)" class="text-light d-block text-right like"><i class="mdi mdi-heart"></i>
+                  Boostrap</a>
+                <a href="javascript:void(0)" class="text-light read-more">Leer Mas <i
+                    class="mdi mdi-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="content p-3">
+              <small class="text-muted p float-right">19th Oct, 19</small>
+              <small><a href="javascript:void(0)" class="text-primary">Event</a></small>
+              <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">8 Beneficios de ser Desarrollador Web</a></h4>
+              <p class="text-muted mt-2">Desde la innovación de las computadoras y el nacimiento de Internet, la tecnología está cambiando vidas. Con
+                el rápido crecimiento de los teléfonos inteligentes, el desarrollo de dispositivos y el creciente alcance de
+                la tecnología en la vida cotidiana, el desarrollo web es uno de los campos más atractivos de la industria
+                tecnológica.</p>
+              <div class="pt-3 mt-3 border-top d-flex">
+                <img src="img/profile_pic.png"
+                  class="img-fluid avatar avatar-ex-sm rounded-pill mr-3 shadow" alt="">
+                <div class="author mt-2">
+                  <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Diego</a></h6>
+                </div>
+              </div>
+            </div>
+          </div><!--end blog post-->
+        </div><!--end col-->
 
-      <div class="col-sm-12 col-md-12 col-lg-12 noticia reset">
-        <h2>Crear Formulario con Bootstrap</h2>
-        <img src="../img/blog/bootstrap.png" alt="post img" class="img_blog" />
-        <article>
-          <p class="articulo">
-            Bootstrap, al igual que con otros elementos del lenguaje HTML, nos
-            proporciona un conjunto de funcionalidades para extender las
-            capacidades de los formularios. En este ejemplo vamos a ver como
-            podemos crear un formulario básico con Bootstrap. Lo primero será
-            crear un formulario básico directamente con HTML.
-          </p>
-        </article>
-        <a class="btn btn-blog pull-right marginBottom10"
-          href="https://lineadecodigo.com/bootstrap/formulario-basico-con-bootstrap/" target="_blank">LEER MAS</a>
-      </div>
+        <div class="col-lg-4 col-md-6 mt-4 pt-2">
+          <div class="blog-post rounded border">
+            <div class="blog-img d-block overflow-hidden position-relative">
+              <img src="../img/blog/bootstrap.png" class="img-fluid rounded-top" alt="">
+              <div class="overlay rounded-top bg-dark"></div>
+              <div class="post-meta">
+                <a href="javascript:void(0)" class="text-light d-block text-right like"><i class="mdi mdi-heart"></i>
+                  Boostrap</a>
+                <a href="javascript:void(0)" class="text-light read-more">Leer Mas <i
+                    class="mdi mdi-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="content p-3">
+              <small class="text-muted p float-right">19th Oct, 19</small>
+              <small><a href="javascript:void(0)" class="text-primary">Software</a></small>
+              <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Crear Formulario con Bootstrap</a></h4>
+              <p class="text-muted mt-2">  Bootstrap, al igual que con otros elementos del lenguaje HTML, nos
+                proporciona un conjunto de funcionalidades para extender las
+                capacidades de los formularios. En este ejemplo vamos a ver como
+                podemos crear un formulario básico con Bootstrap. Lo primero será
+                crear un formulario básico directamente con HTML.</p>
+              <div class="pt-3 mt-3 border-top d-flex">
+                <img src="img/profile_pic.png"
+                  class="img-fluid avatar avatar-ex-sm rounded-pill mr-3 shadow" alt="">
+                <div class="author mt-2">
+                  <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Martin Sobhe</a></h6>
+                </div>
+              </div>
+            </div>
+          </div><!--end blog post-->
+        </div><!--end col-->
+      </div><!--end row-->
 
-      <div class="col-sm-12 col-md-12 col-lg-12 noticia reset">
-        <h2>5 sitios para practicarprogramación</h2>
-        <img src="../img/blog/programacion.jpg" alt="post img" class="img_blog" />
-        <article>
-          <p class="articulo">
-            Sin lugar a dudas la práctica hace al maestro, esto en programación es mucho más, por eso hoy hablaremos de
-            5 sitios para practicar ejercicios de programación y mejorar considerablemente nuestra lógica de
-            programación, ¿Ya utilizas alguno? ¿Tienes otro sitio en mente?
-            La lógica de un programador es una de sus mejores habilidades.
-            Un programador sin lógica de programación simplemente es uno más del montón.
-            Si consideras que no tienes buena lógica de programación, entonces ahora es cuando para mejorarla.
-          </p>
-        </article>
-        <a class="btn btn-blog pull-right marginBottom10"
-          href="https://jonathanmelgoza.com/blog/5-sitios-para-practicar-ejercicios-de-programacion/"
-          target="_blank">LEER
-          MAS</a>
-      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mt-4 pt-2">
+          <div class="blog-post rounded border">
+            <div class="blog-img d-block overflow-hidden position-relative">
+              <img src="../img/blog/programacion.jpg" class="img-fluid rounded-top" alt="">
+              <div class="overlay rounded-top bg-dark"></div>
+              <div class="post-meta">
+                <a href="javascript:void(0)" class="text-light d-block text-right like"><i class="mdi mdi-heart"></i>
+                  33</a>
+                <a href="javascript:void(0)" class="text-light read-more">Leer Mas <i
+                    class="mdi mdi-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="content p-3">
+              <small class="text-muted p float-right">19th Oct, 19</small>
+              <small><a href="javascript:void(0)" class="text-primary">Programacion</a></small>
+              <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">5 sitios para aprender a programar</a></h4>
+              <p class="text-muted mt-2"> Sin lugar a dudas la práctica hace al maestro, esto en programación es mucho más, por eso hoy hablaremos de
+                5 sitios para practicar ejercicios de programación y mejorar considerablemente nuestra lógica de
+                programación, ¿Ya utilizas alguno? ¿Tienes otro sitio en mente?</p>
+              <div class="pt-3 mt-3 border-top d-flex">
+                <img src="../img/profile_pic.png"
+                  class="img-fluid avatar avatar-ex-sm rounded-pill mr-3 shadow" alt="">
+                <div class="author mt-2">
+                  <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Diego Dalera</a></h6>
+                </div>
+              </div>
+            </div>
+          </div><!--end blog post-->
+        </div><!--end col-->
 
-      <div class="row reset">
-        <nav aria-label="...">
-          <ul class="pagination justify-content-end">
-            <li class="page-item disabled">
-              <a class="page-link">Previous</a>
-            </li>
-            <li class="page-item" aria-current="page">
-              <li class="page-item active" ><a class="page-link" href="blog.html">1</a></li>
-              <a class="page-link" href="blog-2.html">2</a></li>
-            <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="blog-2.html">Next</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="col-lg-4 col-md-6 mt-4 pt-2">
+          <div class="blog-post rounded border">
+            <div class="blog-img d-block overflow-hidden position-relative">
+              <img src="/img/blog/desarrollador_web.webp" class="img-fluid rounded-top" alt="" height="280px" width="350px">
+              <div class="overlay rounded-top bg-dark"></div>
+              <div class="post-meta">
+                <a href="javascript:void(0)" class="text-light d-block text-right like"><i class="mdi mdi-heart"></i>
+                  Boostrap</a>
+                <a href="javascript:void(0)" class="text-light read-more">Leer Mas <i
+                    class="mdi mdi-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="content p-3">
+              <small class="text-muted p float-right">19th Oct, 19</small>
+              <small><a href="javascript:void(0)" class="text-primary">Event</a></small>
+              <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">8 Beneficios de ser Desarrollador Web</a></h4>
+              <p class="text-muted mt-2">Desde la innovación de las computadoras y el nacimiento de Internet, la tecnología está cambiando vidas. Con
+                el rápido crecimiento de los teléfonos inteligentes, el desarrollo de dispositivos y el creciente alcance de
+                la tecnología en la vida cotidiana, el desarrollo web es uno de los campos más atractivos de la industria
+                tecnológica.</p>
+              <div class="pt-3 mt-3 border-top d-flex">
+                <img src="img/profile_pic.png"
+                  class="img-fluid avatar avatar-ex-sm rounded-pill mr-3 shadow" alt="">
+                <div class="author mt-2">
+                  <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Diego</a></h6>
+                </div>
+              </div>
+            </div>
+          </div><!--end blog post-->
+        </div><!--end col-->
 
-      </div>
+        <div class="col-lg-4 col-md-6 mt-4 pt-2">
+          <div class="blog-post rounded border">
+            <div class="blog-img d-block overflow-hidden position-relative">
+              <img src="../img/blog/bootstrap.png" class="img-fluid rounded-top" alt="">
+              <div class="overlay rounded-top bg-dark"></div>
+              <div class="post-meta">
+                <a href="javascript:void(0)" class="text-light d-block text-right like"><i class="mdi mdi-heart"></i>
+                  Boostrap</a>
+                <a href="javascript:void(0)" class="text-light read-more">Leer Mas <i
+                    class="mdi mdi-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="content p-3">
+              <small class="text-muted p float-right">19th Oct, 19</small>
+              <small><a href="javascript:void(0)" class="text-primary">Software</a></small>
+              <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Crear Formulario con Bootstrap</a></h4>
+              <p class="text-muted mt-2">  Bootstrap, al igual que con otros elementos del lenguaje HTML, nos
+                proporciona un conjunto de funcionalidades para extender las
+                capacidades de los formularios. En este ejemplo vamos a ver como
+                podemos crear un formulario básico con Bootstrap. Lo primero será
+                crear un formulario básico directamente con HTML.</p>
+              <div class="pt-3 mt-3 border-top d-flex">
+                <img src="img/profile_pic.png"
+                  class="img-fluid avatar avatar-ex-sm rounded-pill mr-3 shadow" alt="">
+                <div class="author mt-2">
+                  <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark name">Martin Sobhe</a></h6>
+                </div>
+              </div>
+            </div>
+          </div><!--end blog post-->
+        </div><!--end col-->
+      </div><!--end row-->
+
   </main>
 
   <!-- Footer -->

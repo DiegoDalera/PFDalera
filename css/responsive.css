@@ -167,21 +167,7 @@ Estilos Responsive Index.html
       background-color: var(--white)
     }
   
-    .proyectos {
-      grid-area: proyectos;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .proyectos .galeria {
-      width: 45%;
-    }
-  
+   
 
     /*
   Estilos Responsive Footer
@@ -219,21 +205,6 @@ Estilos Responsive Index.html
     background-color: aliceblue;
   }
 
-  .proyectos {
-    grid-area: proyectos;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .proyectos .galeria {
-    width: 100%;
-
-  }
 
   .footer .contenido{
     display: flex;

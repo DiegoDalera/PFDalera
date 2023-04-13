@@ -197,24 +197,17 @@ Responsive de footer
 Estilos Experiencia.html
 */
 
+.separacion_xp{
+  margin-top: 20px;
+
+}
 .titulo_exp {
   margin: 30px 0px;
-}
-
-.contenedor_barras {
-  margin: 30px 0px;
-}
-.skill {
-  margin: 1rem 0rem;
 }
 
 .alinear_copy_v {
   display: flex;
   align-items: center;
-}
-
-.progress {
-  height: 10px;
 }
 
 .padding_exp {

@@ -354,16 +354,26 @@ Estilos Contacto
   justify-content: center;
   background-color: var(--white);
   border-radius: 20px;
-  padding: 20px;
   box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
+  padding: 3rem 4rem 3rem 4rem;
 }
 
 .contacto .titulo_contacto {
   margin: 10px;
 }
 
+.linea{
+    width: 5rem;
+    height: 0.25rem;
+    margin-bottom: 1.25rem;
+    background: var(--blue);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .contacto .parrafo_contacto {
-  margin: 10px;
+  max-width: 30rem;
+  font-size: 1rem;
 }
 
 .contacto .btn {
@@ -563,7 +573,6 @@ Utilizo otra disposicion del grid distinta al Index.html
   flex-wrap: wrap;
 }
 
-
 .proyectos {
   grid-area: proyectos;
   display: flex;
@@ -572,42 +581,50 @@ Utilizo otra disposicion del grid distinta al Index.html
   justify-content: center;
 }
 
-.proyectos .titulo_proyectos{
-  margin: 20px 0px;
+.proyectos .container{
+	padding-bottom: 60px;
+	padding-top: 60px;
 }
 
-.galerias{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
+.proyectos .container .encabezado{
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-.galeria {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 30%;
-  box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
-  background-color: var(--white);
+.container .encabezado h2{
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 }
 
-.galeria img {
+.card_proyectos{
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15); 
+  transition: 0.4s ease; 
+  margin-bottom: 30px; 
+}
+
+.card_proyectos p {
+  font-size: 14px; 
+}
+
+.card_proyectos a {
+  color:var(--black); 
+}
+
+.card_proyectos:hover {
+  text-decoration: none; 
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+}
+
+.cuerpo_card {
+  text-align: center; 
+}
+
+.card_imagen {
   width: 100%;
-  height: auto;
-  transition: 1s linear;
- 
-}
-
-.galeria img:hover {
-  
-  transform: translateY(-5px);
-}
-
-.descripcion {
-  padding: 15px;
-  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 
