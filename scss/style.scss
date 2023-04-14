@@ -8,9 +8,7 @@ $color-cream: #fff1dc;
 $color-brown: #e8d5c4;
 $color-blanco: #f5f3f3;
 $color-negro: rgb(0, 0, 0, 0.9);
-
-$espaciado-estandar: 10px;
-$espaciado-doble: 20px;
+$color-verde:rgb(4, 89, 14);
 
 $fuente-normal: 1em;
 $fuente-pequena: 0.8em;
@@ -50,10 +48,6 @@ body {
 
 /* Estilos Index.html */
 
-/*
-Disposicion del Grid
-*/
-
 .wrapper {
   display: grid;
   grid-template-areas:
@@ -80,36 +74,36 @@ Disposicion del Grid
     z-index: 100;
     overflow: hidden;
     .topnav {
+		.icon{
+			display: none;
+		}
+		.active {
+			background-color: $color-verde;
+			color: $color-blanco;
+	  }
         a {
-        float: left;
-        display: block;
-        color: $color-blanco;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        a:hover {
-        background-color: $color-azul-hover;
-        color: black;}
-        a.active {
-        background-color: $color-azul-hover;
-        color: $color-blanco;
-          }
+			float: left;
+			display: block;
+			color: $color-blanco;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			&:hover {
+				background-color: $color-azul-hover;
+				color: black;}
+
         }
       }
     }
   }
 
-  
-  /*
-Estilos Header
-*/
 
-
+  /* Estilos Header */
 .header {
 	grid-area: header;
 	height: 80vh;
-	background-image: url(../img/portada.jpg);
+	background-image: url(../img/img_portada.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
@@ -117,50 +111,49 @@ Estilos Header
 	justify-content: center;
 	align-items: flex-start;
 	margin: 30px 0px;
-}
-.quien_soy_info {
-	padding-left: 50px;
-	h1 {
-		color: $color-negro;
-		margin: 10px;
-		margin: 10px 0px;
-	}
-	h2 {
-		color: $color-negro;
-		margin: 10px;
-		margin: 10px 0px;
-	}
-	.btn {
-		width: 150px;
-		margin: 10px 0px;
-		background-color: $color-azul;
-		color: $color-blanco;
-		padding: 5px;
-		text-align: center;
-		display: inline-block;
-		font-size: 16px;
-		&:hover {
-			background-color:$color-azul-hover;
+	.quien_soy_info {
+		padding-left: 50px;
+		h1 {
+			color: $color-negro;
+			margin: 10px;
+			margin: 10px 0px;
+		}
+		h2 {
+			color: $color-negro;
+			margin: 10px;
+			margin: 10px 0px;
+		}
+		.btn {
+			width: 150px;
+			margin: 10px 0px;
+			background-color: $color-azul;
 			color: $color-blanco;
+			padding: 5px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+			&:hover {
+				background-color:$color-azul-hover;
+				color: $color-blanco;
+			}
 		}
 	}
-}
-
-.quien_soy_redes {
-	padding-left: 50px;
-	margin: 10px 0px;
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	.redes {
+	.quien_soy_redes {
+		padding-left: 50px;
+		margin: 10px 0px;
 		list-style: none;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		padding-left: 0px;
-		li {
-			margin: 0px 5px;
+		.redes {
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			padding-left: 0px;
+			li {
+				margin: 0px 5px;
+			}
 		}
 	}
 }
@@ -212,16 +205,12 @@ Estilos Habilidades
 	}
 }
 
-$color_1: var(--black);
-$background-color_1: var(--brown);
-$background-color_2: var(--white);
 
 /*
 Estilos Portfolio
 */
-/*
-Estilos Mis Skills
-*/
+
+
 .portfolio {
 	grid-area: portfolio;
 	display: flex;
@@ -238,28 +227,31 @@ Estilos Mis Skills
 	.ultimos_trabajos {
 		display: flex;
 		width: 90%;
-		height: 400px;
+		height: 300px;
 		margin-bottom: 30px;
 		img {
 			display: flex;
 			width: 10px;
 			flex-grow: 1;
 			object-fit: cover;
-			opacity: 0.8;
+			opacity: 0.7;
 			transition: 0.5s ease;
 			&:hover {
 				cursor: crosshair;
 				width: 300px;
 				opacity: 1;
-				filter: contrast(120%);
+				filter: contrast(140%);
 			}
 		}
 	}
 }
+
+/*  Estilos Mis Skills */
+
 .skills {
 	grid-area: skills;
-	background-color: $background-color_1;
-	color: $color_1;
+	background-color:$color-brown;
+	color: $color-negro;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -268,61 +260,51 @@ Estilos Mis Skills
 	.texto {
 		margin-top: 30px;
 	}
-}
-.cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 90%;
-}
-.card {
-	width: 30%;
-	padding: 15px;
-	margin: 15px;
-	background-color: $background-color_2;
-	border-radius: 3px;
-	transition: transform 0.4s;
-	display: flex;
-	align-items: center;
-	a {
-		text-decoration: none;
-		color: $color_1;
+	.cards {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 90%;
+		.card {
+			width: 30%;
+			padding: 15px;
+			margin: 15px;
+			background-color: $color-blanco;
+			border-radius: 3px;
+			transition: transform 0.4s;
+			display: flex;
+			align-items: center;
+			a {
+				text-decoration: none;
+				color: $color-negro;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				i {
+					justify-content: center;
+					margin: 20px 0px;
+					&:hover {
+						box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
+						transform: translateY(-5px);
+			}
+	}}}
+	.card_titulo {
+		margin: 5px 0;
+		font-size: 1.25rem;
+		letter-spacing: 1px;
+		text-align: center;
 	}
-	i {
-		justify-content: center;
-		margin: 20px 0px;
+	.card_descripcion {
+		font-size: 0.75rem;
+		letter-spacing: 1px;
+		text-align: center;
+		}
 	}
-	&:hover {
-		box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
-		transform: translateY(-5px);
-	}
-}
-.card_titulo {
-	margin: 5px 0;
-	font-size: 1.25rem;
-	letter-spacing: 1px;
-	text-align: center;
-}
-.card_descripcion {
-	font-size: 0.75rem;
-	letter-spacing: 1px;
-	text-align: center;
 }
 
-$color_1: var(--white);
-$background-color_1: var(--white);
-$background-color_2: var(--blue);
-$background-color_3: var(--blue_hover);
 
-/*
-Estilos Contacto
-*/
-/*
-Estilos Footer
-*/
+/*  Estilos Contacto  */
+
 .contacto {
 	grid-area: contacto;
 	display: flex;
@@ -334,7 +316,7 @@ Estilos Footer
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: $background-color_1;
+		background-color: $color-blanco;
 		border-radius: 20px;
 		box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
 		padding: 3rem 4rem 3rem 4rem;
@@ -348,19 +330,22 @@ Estilos Footer
 	}
 	.btn {
 		width: 150px;
-		background-color: $background-color_2;
+		background-color: $color-azul;
 		margin: 10px;
 		padding: 10px;
-		color: $color_1;
+		color: $color-blanco;
 		font-size: 1rem;
 		transition-duration: 0.4s;
 		cursor: pointer;
 		&:hover {
-			background-color: $background-color_3;
-			color: $color_1;
+			background-color: $color-azul-hover;
+			color: $color-blanco;
 		}
 	}
 }
+
+
+/*  Estilos Footer */
 .linea {
 	width: 5rem;
 	height: 0.25rem;
@@ -371,7 +356,7 @@ Estilos Footer
 }
 footer {
 	grid-area: footer;
-	background-color: $background-color_2;
+	background-color: $color-azul;
 	display: flex;
 	justify-content: space-between;
 }
@@ -423,7 +408,7 @@ Utilizo otra disposicion del grid distinta al Index.html
 			a {
 				float: left;
 				display: block;
-				color: $color_1;
+				color: $color-blanco;
 				text-align: center;
 				padding: 14px 16px;
 				text-decoration: none;

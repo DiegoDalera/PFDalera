@@ -29,9 +29,6 @@ body {
 }
 
 /* Estilos Index.html */
-/*
-Disposicion del Grid
-*/
 .wrapper {
   display: grid;
   grid-template-areas: "nav nav nav nav nav" ". header header header ." "habilidades habilidades habilidades habilidades habilidades" "portfolio portfolio portfolio portfolio portfolio" "skills skills skills skills skills" ". contacto contacto contacto ." "footer footer footer footer footer";
@@ -52,6 +49,13 @@ Disposicion del Grid
   z-index: 100;
   overflow: hidden;
 }
+.wrapper .nav .topnav .icon {
+  display: none;
+}
+.wrapper .nav .topnav .active {
+  background-color: rgb(4, 89, 14);
+  color: #f5f3f3;
+}
 .wrapper .nav .topnav a {
   float: left;
   display: block;
@@ -61,22 +65,16 @@ Disposicion del Grid
   text-decoration: none;
   font-size: 17px;
 }
-.wrapper .nav .topnav a a:hover {
+.wrapper .nav .topnav a:hover {
   background-color: #2a6c85;
   color: black;
 }
-.wrapper .nav .topnav a a.active {
-  background-color: #2a6c85;
-  color: #f5f3f3;
-}
 
-/*
-Estilos Header
-*/
+/* Estilos Header */
 .header {
   grid-area: header;
   height: 80vh;
-  background-image: url(../img/portada.jpg);
+  background-image: url(../img/img_portada.jpg);
   background-attachment: fixed;
   background-size: cover;
   display: flex;
@@ -85,21 +83,20 @@ Estilos Header
   align-items: flex-start;
   margin: 30px 0px;
 }
-
-.quien_soy_info {
+.header .quien_soy_info {
   padding-left: 50px;
 }
-.quien_soy_info h1 {
+.header .quien_soy_info h1 {
   color: rgba(0, 0, 0, 0.9);
   margin: 10px;
   margin: 10px 0px;
 }
-.quien_soy_info h2 {
+.header .quien_soy_info h2 {
   color: rgba(0, 0, 0, 0.9);
   margin: 10px;
   margin: 10px 0px;
 }
-.quien_soy_info .btn {
+.header .quien_soy_info .btn {
   width: 150px;
   margin: 10px 0px;
   background-color: #3a98b9;
@@ -109,12 +106,11 @@ Estilos Header
   display: inline-block;
   font-size: 16px;
 }
-.quien_soy_info .btn:hover {
+.header .quien_soy_info .btn:hover {
   background-color: #2a6c85;
   color: #f5f3f3;
 }
-
-.quien_soy_redes {
+.header .quien_soy_redes {
   padding-left: 50px;
   margin: 10px 0px;
   list-style: none;
@@ -122,14 +118,14 @@ Estilos Header
   flex-direction: row;
   justify-content: flex-start;
 }
-.quien_soy_redes .redes {
+.header .quien_soy_redes .redes {
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding-left: 0px;
 }
-.quien_soy_redes .redes li {
+.header .quien_soy_redes .redes li {
   margin: 0px 5px;
 }
 
@@ -182,9 +178,6 @@ Estilos Habilidades
 /*
 Estilos Portfolio
 */
-/*
-Estilos Mis Skills
-*/
 .portfolio {
   grid-area: portfolio;
   display: flex;
@@ -202,7 +195,7 @@ Estilos Mis Skills
 .portfolio .ultimos_trabajos {
   display: flex;
   width: 90%;
-  height: 400px;
+  height: 300px;
   margin-bottom: 30px;
 }
 .portfolio .ultimos_trabajos img {
@@ -210,20 +203,21 @@ Estilos Mis Skills
   width: 10px;
   flex-grow: 1;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.7;
   transition: 0.5s ease;
 }
 .portfolio .ultimos_trabajos img:hover {
   cursor: crosshair;
   width: 300px;
   opacity: 1;
-  filter: contrast(120%);
+  filter: contrast(140%);
 }
 
+/*  Estilos Mis Skills */
 .skills {
   grid-area: skills;
-  background-color: var(--brown);
-  color: var(--black);
+  background-color: #e8d5c4;
+  color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,59 +227,50 @@ Estilos Mis Skills
 .skills .texto {
   margin-top: 30px;
 }
-
-.cards {
+.skills .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 90%;
 }
-
-.card {
+.skills .cards .card {
   width: 30%;
   padding: 15px;
   margin: 15px;
-  background-color: var(--white);
+  background-color: #f5f3f3;
   border-radius: 3px;
   transition: transform 0.4s;
   display: flex;
   align-items: center;
 }
-.card a {
+.skills .cards .card a {
   text-decoration: none;
-  color: var(--black);
+  color: rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.card i {
+.skills .cards .card a i {
   justify-content: center;
   margin: 20px 0px;
 }
-.card:hover {
+.skills .cards .card a i:hover {
   box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
   transform: translateY(-5px);
 }
-
-.card_titulo {
+.skills .cards .card_titulo {
   margin: 5px 0;
   font-size: 1.25rem;
   letter-spacing: 1px;
   text-align: center;
 }
-
-.card_descripcion {
+.skills .cards .card_descripcion {
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-align: center;
 }
 
-/*
-Estilos Contacto
-*/
-/*
-Estilos Footer
-*/
+/*  Estilos Contacto  */
 .contacto {
   grid-area: contacto;
   display: flex;
@@ -298,7 +283,7 @@ Estilos Footer
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: #f5f3f3;
   border-radius: 20px;
   box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
   padding: 3rem 4rem 3rem 4rem;
@@ -312,19 +297,20 @@ Estilos Footer
 }
 .contacto .btn {
   width: 150px;
-  background-color: var(--blue);
+  background-color: #3a98b9;
   margin: 10px;
   padding: 10px;
-  color: var(--white);
+  color: #f5f3f3;
   font-size: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 .contacto .btn:hover {
-  background-color: var(--blue_hover);
-  color: var(--white);
+  background-color: #2a6c85;
+  color: #f5f3f3;
 }
 
+/*  Estilos Footer */
 .linea {
   width: 5rem;
   height: 0.25rem;
@@ -336,7 +322,7 @@ Estilos Footer
 
 footer {
   grid-area: footer;
-  background-color: var(--blue);
+  background-color: #3a98b9;
   display: flex;
   justify-content: space-between;
 }
@@ -385,7 +371,7 @@ Utilizo otra disposicion del grid distinta al Index.html
 .wrapper_contacto .nav .topnav a {
   float: left;
   display: block;
-  color: var(--white);
+  color: #f5f3f3;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
