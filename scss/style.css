@@ -379,7 +379,7 @@ Estilos Responsive Index.html
     text-align: left;
   }
 }
-/* Responsive Competencias*/
+/* Estilos Responsive Competencias*/
 @media screen and (max-width: 576px) {
   .competencias {
     display: flex;
@@ -390,9 +390,9 @@ Estilos Responsive Index.html
     width: 100%;
     margin: 20px 0px;
     padding: 0px;
-    background-color: rgb(247, 247, 247);
+    background-color: #f5f3f3;
   }
-  /*responsive portfolio*/
+  /* Estilos responsive Portfolio*/
   .portfolio {
     grid-area: portfolio;
     display: flex;
@@ -426,7 +426,7 @@ Estilos Responsive Index.html
     width: 75%;
     padding: 10px;
     margin: 10px;
-    background-color: rgb(247, 247, 247);
+    background-color: #f5f3f3;
     border-radius: 3px;
     transition: transform 0.3s;
     display: flex;
@@ -448,19 +448,14 @@ Estilos Responsive Index.html
     width: 95%;
     padding: 15px;
     margin: 15px;
-    background-color: rgb(247, 247, 247);
+    background-color: #f5f3f3;
     border-radius: 3px;
     transition: transform 0.3s;
     display: flex;
     align-items: center;
   }
 }
-/*
-Estilos de la pagina Contacto.Html
-
-Disposicion del Grid
-Utilizo otra disposicion del grid distinta al Index.html 
-*/
+/*  Estilos de la pagina Contacto.Html  */
 .wrapper_contacto {
   display: grid;
   grid-template-areas: "nav nav nav nav nav" ". contacto contacto contacto ." "footer footer footer footer footer";
@@ -536,30 +531,39 @@ Utilizo otra disposicion del grid distinta al Index.html
 }
 .contenido_formulario .columna_izq .direccion {
   font-size: 14px;
-  color: #f5f3f3;
+  color: rgba(0, 0, 0, 0.9);
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.contenido_formulario .columna_izq .direccion i {
+  color: rgba(0, 0, 0, 0.9);
 }
 .contenido_formulario .columna_izq .telefono {
   font-size: 14px;
-  color: #f5f3f3;
+  color: rgba(0, 0, 0, 0.9);
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.contenido_formulario .columna_izq .telefono i {
+  color: rgba(0, 0, 0, 0.9);
+}
 .contenido_formulario .columna_izq .mail {
   font-size: 14px;
-  color: #f5f3f3;
+  color: rgba(0, 0, 0, 0.9);
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.contenido_formulario .columna_izq .mail i {
+  color: rgba(0, 0, 0, 0.9);
 }
 .contenido_formulario .columna_izq .texto {
   font-size: 14px;
@@ -592,7 +596,7 @@ Utilizo otra disposicion del grid distinta al Index.html
   border: none;
   outline: none;
   font-size: 16px;
-  background: #f5f3f3;
+  background: #b2b6b7;
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
@@ -603,7 +607,7 @@ Utilizo otra disposicion del grid distinta al Index.html
   border: none;
   outline: none;
   font-size: 16px;
-  background: #f5f3f3;
+  background: #b2b6b7;
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
@@ -657,6 +661,47 @@ footer {
   margin: 10px;
 }
 
+/* Responsive para contacto html */
+@media screen and (max-width: 900px) {
+  .wrapper_contacto {
+    display: grid;
+    grid-template-areas: "nav" "contacto" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  .formulario {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .formulario .contenido_formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding: 20px 50px 20px 0px;
+  }
+  .formulario .contenido_formulario .columna_izq {
+    display: none;
+  }
+  .formulario .contenido_formulario .columna_der {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contenido {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenido .redes_sociales {
+    display: flex;
+    flex-direction: row;
+  }
+}
 /*experiencia html*/
 .nav {
   /* Estilos Barra de navegacion  */
@@ -706,13 +751,13 @@ footer {
   position: absolute;
   left: 0;
   top: -30px;
-  color: #818181;
+  color: #b2b6b7;
   font-size: 16px;
 }
 .progress .progress-bar-number {
   position: absolute;
   right: 0;
-  color: #888888;
+  color: #b2b6b7;
   top: -30px;
   font-weight: 600;
   font-size: 14px;

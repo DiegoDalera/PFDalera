@@ -9,6 +9,7 @@ $color-brown: #e8d5c4;
 $color-blanco: #f5f3f3;
 $color-negro: rgb(0, 0, 0, 0.9);
 $color-verde:rgb(4, 89, 14);
+$color-gris:#b2b6b7;
 
 $fuente-normal: 1em;
 $fuente-pequena: 0.8em;
@@ -391,7 +392,6 @@ Estilos Responsive Index.html
 	}
 }
 
-
 @media screen and (max-width: 576px) {
 	.topnav {
 		a {
@@ -420,7 +420,7 @@ Estilos Responsive Index.html
 }
 
 
-/* EstolosResponsive Competencias*/
+/* Estilos Responsive Competencias*/
 
 @media screen and (max-width: 576px) {
 	.competencias {
@@ -434,12 +434,12 @@ Estilos Responsive Index.html
 				width: 100%;
 				margin: 20px 0px;
 				padding: 0px;
-				background-color: $background-color_1;
+				background-color: $color-blanco;
 			}
 		}
 	}
 
-	/* Estolos responsive Portfolio*/
+	/* Estilos responsive Portfolio*/
 
 	.portfolio {
 		grid-area: portfolio;
@@ -477,7 +477,7 @@ Estilos Responsive Index.html
 				width: 75%;
 				padding: 10px;
 				margin: 10px;
-				background-color: $background-color_1;
+				background-color: $color-blanco;
 				border-radius: 3px;
 				transition: transform 0.3s;
 				display: flex;
@@ -503,7 +503,7 @@ Estilos Responsive Index.html
 				width: 95%;
 				padding: 15px;
 				margin: 15px;
-				background-color: $background-color_1;
+				background-color: $color-blanco;
 				border-radius: 3px;
 				transition: transform 0.3s;
 				display: flex;
@@ -594,36 +594,40 @@ Estilos Responsive Index.html
 		}
 		.direccion {
 			font-size: 14px;
-			color: $color-blanco;
+			color: $color-negro;
 			margin-bottom: 10px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			i {color: $color-negro;}
 		}
 		.telefono {
 			font-size: 14px;
-			color: $color-blanco;
+			color: $color-negro;
 			margin-bottom: 10px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			i {color: $color-negro;}
 		}
 		.mail {
 			font-size: 14px;
-			color: $color-blanco;
+			color: $color-negro;
 			margin-bottom: 10px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			i {color: $color-negro;}
 		}
 		.texto {
 			font-size: 14px;
-			color: $color-negro
+			color: $color-negro;
 		}
 	}
+	
 	.columna_der {
 		width: 75%;
 		margin-left: 75px;
@@ -649,7 +653,7 @@ Estilos Responsive Index.html
 				border: none;
 				outline: none;
 				font-size: 16px;
-				background:$color-blanco;
+				background:$color-gris;
 				border-radius: 6px;
 				padding: 0 15px;
 				resize: none;
@@ -660,7 +664,7 @@ Estilos Responsive Index.html
 				border: none;
 				outline: none;
 				font-size: 16px;
-				background:$color-blanco;
+				background:$color-gris;
 				border-radius: 6px;
 				padding: 0 15px;
 				resize: none;
@@ -715,6 +719,53 @@ footer {
 	}
 }
 
+
+/* Responsive para contacto html */ 
+
+@media screen and (max-width: 900px) {
+	.wrapper_contacto {
+		display: grid;
+		grid-template-areas: "nav" "contacto" "footer";
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+	}
+	.formulario {
+		grid-area: contacto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.contenido_formulario {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 95%;
+			padding: 20px 50px 20px 0px;
+			.columna_izq {
+				display: none;
+			}
+			.columna_der {
+				width: 90%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.contenido{
+		display: flex;
+		flex-direction: column;
+	   .redes_sociales{
+			display: flex;
+			flex-direction:row;
+	  }
+	}
+}
+
+
+
 /*experiencia html*/
 
 .nav {
@@ -748,8 +799,6 @@ footer {
       }
     }
 
-$color_1: #818181;
-$color_2: #888888;
 
 .progress {
 	position: relative;
@@ -768,13 +817,13 @@ $color_2: #888888;
 		position: absolute;
 		left: 0;
 		top: -30px;
-		color: $color_1;
+		color: $color-gris;
 		font-size: 16px;
 	}
 	.progress-bar-number {
 		position: absolute;
 		right: 0;
-		color: $color_2;
+		color: $color-gris;
 		top: -30px;
 		font-weight: 600;
 		font-size: 14px;
