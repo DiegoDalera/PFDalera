@@ -1,45 +1,4 @@
-/*  Estilos paginas hechas con boostrap ( Experiencia.html y Blog.html) */
 
-/*
-Variables Colores del sitio las mismas que las otras paginas 
-*/
-:root {
-  --blue: #3a98b9;
-  --blue_hover: #2a6c85;
-  --cream: #fff1dc;
-  --brown: #e8d5c4;
-  --white: #eeeeee;
-  --black: rgb(0, 0, 0, 0.9);
-}
-
-/*
-Estlos globales
-*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: golos_regular;
-  src: url(../fonts/GolosText-Regular.ttf);
-}
-
-a {
-  color: var(--white);
-  text-decoration: none;
-}
-
-i {
-  font-size: 1.5em;
-}
-
-body {
-  background-color: var(--cream);
-  font-family: golos_regular;
-}
 
 /*
 la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap y que no me dejaba hacerlo responsive 100%

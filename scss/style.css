@@ -715,6 +715,10 @@ footer {
   z-index: 100;
   overflow: hidden;
 }
+.nav .topnav .active {
+  background-color: #2a6c85;
+  color: #f5f3f3;
+}
 .nav .topnav a {
   float: left;
   display: block;
@@ -724,13 +728,13 @@ footer {
   text-decoration: none;
   font-size: 17px;
 }
-.nav .topnav a a:hover {
+.nav .topnav a:hover {
   background-color: #2a6c85;
   color: black;
 }
-.nav .topnav a a.active {
-  background-color: #2a6c85;
-  color: #f5f3f3;
+
+.experiencia .separacion_xp {
+  margin: 30px;
 }
 
 .progress {
@@ -763,9 +767,22 @@ footer {
   font-size: 14px;
 }
 
-/* proyectos*/
+/*
+la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap y que no me dejaba hacerlo responsive 100%
+*/
+.reset {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.alinear_copy_v {
+  display: flex;
+  align-items: center;
+}
+
 /* Estilos para la pagina de Proyectos  */
-/* Utilizo otra disposicion del grid que para el index */
 .wrapper_proyectos {
   display: grid;
   grid-template-areas: "nav nav nav nav nav" ". proyectos proyectos proyectos ." "footer footer footer footer footer";
@@ -807,7 +824,7 @@ footer {
   font-size: 14px;
 }
 .card_proyectos a {
-  color: var(--black);
+  color: #b2b6b7;
 }
 .card_proyectos:hover {
   text-decoration: none;
