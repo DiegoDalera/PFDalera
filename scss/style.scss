@@ -825,6 +825,8 @@ footer {
 		justify-content: center;
 }
 
+}
+
 .nav {
     /* Estilos Barra de navegacion  */
     grid-area: nav;
@@ -921,6 +923,39 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 	grid-row-gap: 10px;
 	flex-wrap: wrap;
 }
+
+ /* Estilos Barra de navegacion  */
+.nav {
+    grid-area: nav;
+    background-color: $color-azul;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 100;
+    overflow: hidden;
+    .topnav {
+		.active {
+			background-color: $color-verde;
+			color: $color-blanco;
+          }
+        a {
+			float: left;
+			display: block;
+			color: $color-blanco;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+			&:hover {
+				background-color: $color-azul-hover;
+				color: black;}
+        }
+      }
+    }
+
+
 .proyectos {
 	grid-area: proyectos;
 	display: flex;
@@ -973,4 +1008,3 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 
 
 
-}
