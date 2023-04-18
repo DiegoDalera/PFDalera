@@ -8,8 +8,8 @@ $color-cream: #fff1dc;
 $color-brown: #e8d5c4;
 $color-blanco: #f5f3f3;
 $color-negro: rgb(0, 0, 0, 0.9);
-$color-verde:rgb(4, 89, 14);
-$color-gris:#b2b6b7;
+$color-verde: rgb(4, 89, 14);
+$color-gris: #b2b6b7;
 
 $fuente-normal: 1em;
 $fuente-pequena: 0.8em;
@@ -22,82 +22,88 @@ Estilos Globales
 */
 
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
 @font-face {
-  font-family: golos_regular;
-  src: url(../fonts/GolosText-Regular.ttf);
+	font-family: golos_regular;
+	src: url(../fonts/GolosText-Regular.ttf);
 }
 
 a {
-  color: $color-blanco;
-  text-decoration: none;
+	color: $color-blanco;
+	text-decoration: none;
 }
 
 i {
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 body {
-  background-color: $color-cream;
-  font-family: $tipografia-general;
+	background-color: $color-cream;
+	font-family: $tipografia-general;
 }
 
 
 /* Estilos Index.html */
 
 .wrapper {
-  display: grid;
-  grid-template-areas:
-    "nav nav nav nav nav"
-    ". header header header ."
-    "habilidades habilidades habilidades habilidades habilidades"
-    "portfolio portfolio portfolio portfolio portfolio"
-    "skills skills skills skills skills"
-    ". contacto contacto contacto ."
-    "footer footer footer footer footer";
-  grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-  grid-template-rows: repeat(7);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  .nav {
-    /* Estilos Barra de navegacion  */
-    grid-area: nav;
-    background-color: $color-azul;
-    position: sticky;
-    top: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    z-index: 100;
-    overflow: hidden;
-    .topnav {
-		.icon{
-			display: none;
-		}
-		.active {
-			background-color: $color-verde;
-			color: $color-blanco;
-	  }
-        a {
-			float: left;
-			display: block;
-			color: $color-blanco;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-			&:hover {
-				background-color: $color-azul-hover;
-				color: black;}
+	display: grid;
+	grid-template-areas:
+		"nav nav nav nav nav"
+		". header header header ."
+		"habilidades habilidades habilidades habilidades habilidades"
+		"portfolio portfolio portfolio portfolio portfolio"
+		"skills skills skills skills skills"
+		". contacto contacto contacto ."
+		"footer footer footer footer footer";
+	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+	grid-template-rows: repeat(7);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
 
-        }
-      }
-    }
-  }
+	.nav {
+		/* Estilos Barra de navegacion  */
+		grid-area: nav;
+		background-color: $color-azul;
+		position: sticky;
+		top: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		z-index: 100;
+		overflow: hidden;
+
+		.topnav {
+			.icon {
+				display: none;
+			}
+
+			.active {
+				background-color: $color-verde;
+				color: $color-blanco;
+			}
+
+			a {
+				float: left;
+				display: block;
+				color: $color-blanco;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+
+				&:hover {
+					background-color: $color-azul-hover;
+					color: black;
+				}
+
+			}
+		}
+	}
+}
 
 @media screen and (max-width: 600px) {
 	.topnav {
@@ -106,18 +112,22 @@ body {
 				display: none;
 			}
 		}
+
 		a.icon {
 			float: right;
 			display: block;
 		}
 	}
+
 	.topnav.responsive {
 		position: relative;
+
 		.icon {
 			position: absolute;
 			right: 0;
 			top: 0;
 		}
+
 		a {
 			float: none;
 			display: block;
@@ -127,7 +137,7 @@ body {
 }
 
 
-  /* Estilos Header */
+/* Estilos Header */
 .header {
 	grid-area: header;
 	height: 80vh;
@@ -139,18 +149,22 @@ body {
 	justify-content: center;
 	align-items: flex-start;
 	margin: 30px 0px;
+
 	.quien_soy_info {
 		padding-left: 50px;
+
 		h1 {
 			color: $color-negro;
 			margin: 10px;
 			margin: 10px 0px;
 		}
+
 		h2 {
 			color: $color-negro;
 			margin: 10px;
 			margin: 10px 0px;
 		}
+
 		.btn {
 			width: 150px;
 			margin: 10px 0px;
@@ -160,12 +174,14 @@ body {
 			text-align: center;
 			display: inline-block;
 			font-size: 16px;
+
 			&:hover {
-				background-color:$color-azul-hover;
+				background-color: $color-azul-hover;
 				color: $color-blanco;
 			}
 		}
 	}
+
 	.quien_soy_redes {
 		padding-left: 50px;
 		margin: 10px 0px;
@@ -173,19 +189,23 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
+
 		.redes {
 			list-style: none;
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-start;
 			padding-left: 0px;
+
 			li {
 				margin: 0px 5px;
-				a{
-					i{
+
+				a {
+					i {
 						color: $color-blanco;
-						&:hover{
-							color:$color-azul-hover;
+
+						&:hover {
+							color: $color-azul-hover;
 						}
 					}
 				}
@@ -206,18 +226,22 @@ Estilos Habilidades
 	align-items: center;
 	justify-content: center;
 	padding: 20px 10px;
+
 	.titulo {
 		margin: 10px;
 		padding: 10px;
 		text-align: center;
 	}
+
 	.texto_parrafo {
 		margin: 0px 60px;
 		text-align: center;
 	}
+
 	.competencias {
 		display: flex;
 		justify-content: space-around;
+
 		.mis_competencias {
 			width: 33%;
 			margin: 30px;
@@ -227,13 +251,16 @@ Estilos Habilidades
 			flex-direction: column;
 			align-items: center;
 			transition: transform 0.4s;
+
 			&:hover {
 				box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
 				transform: translateY(-5px);
 			}
+
 			p {
 				text-align: center;
 			}
+
 			i {
 				margin: 20px 0px;
 			}
@@ -253,6 +280,7 @@ Estilos Portfolio
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 	.titulo_texto {
 		display: flex;
 		flex-direction: column;
@@ -260,11 +288,13 @@ Estilos Portfolio
 		align-items: center;
 		margin: 30px 0px;
 	}
+
 	.ultimos_trabajos {
 		display: flex;
 		width: 90%;
 		height: 300px;
 		margin-bottom: 30px;
+
 		img {
 			display: flex;
 			width: 10px;
@@ -272,6 +302,7 @@ Estilos Portfolio
 			object-fit: cover;
 			opacity: 0.7;
 			transition: 0.5s ease;
+
 			&:hover {
 				cursor: crosshair;
 				width: 300px;
@@ -286,21 +317,24 @@ Estilos Portfolio
 
 .skills {
 	grid-area: skills;
-	background-color:$color-brown;
+	background-color: $color-brown;
 	color: $color-negro;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 30px;
+
 	.texto {
 		margin-top: 30px;
 	}
+
 	.cards {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 90%;
+
 		.card {
 			width: 30%;
 			padding: 15px;
@@ -310,20 +344,26 @@ Estilos Portfolio
 			transition: transform 0.4s;
 			display: flex;
 			align-items: center;
+
 			&:hover {
 				box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
-				transform: translateY(-5px);}
+				transform: translateY(-5px);
+			}
+
 			a {
 				text-decoration: none;
 				color: $color-negro;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+
 				i {
 					justify-content: center;
-					margin: 20px 0px;	
+					margin: 20px 0px;
+				}
 			}
-	}}}
+		}
+	}
 
 	.card_titulo {
 		margin: 5px 0;
@@ -331,12 +371,13 @@ Estilos Portfolio
 		letter-spacing: 1px;
 		text-align: center;
 	}
+
 	.card_descripcion {
 		font-size: 0.75rem;
 		letter-spacing: 1px;
 		text-align: center;
-		}
 	}
+}
 
 
 
@@ -348,6 +389,7 @@ Estilos Portfolio
 	flex-direction: column;
 	align-items: center;
 	padding: 30px 10px;
+
 	.contacto_contenedor {
 		display: flex;
 		flex-direction: column;
@@ -357,14 +399,17 @@ Estilos Portfolio
 		border-radius: 20px;
 		box-shadow: 0px 0px 20px -5px rgba(19, 19, 19, 0.2);
 		padding: 3rem 4rem 3rem 4rem;
+
 		.titulo_contacto {
 			margin: 10px;
 		}
+
 		.parrafo_contacto {
 			max-width: 30rem;
 			font-size: 1rem;
 		}
-		.linea{
+
+		.linea {
 			width: 5rem;
 			height: 0.25rem;
 			margin-bottom: 1.25rem;
@@ -372,6 +417,7 @@ Estilos Portfolio
 			margin-left: auto;
 			margin-right: auto;
 		}
+
 		.btn {
 			width: 150px;
 			background-color: $color-azul;
@@ -381,13 +427,14 @@ Estilos Portfolio
 			font-size: 1rem;
 			transition-duration: 0.4s;
 			cursor: pointer;
+
 			&:hover {
 				background-color: $color-azul-hover;
 				color: $color-blanco;
 			}
 
-	}
-	
+		}
+
 
 
 	}
@@ -402,16 +449,19 @@ footer {
 	display: flex;
 	justify-content: space-between;
 }
+
 .contenido {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 .redes_sociales {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
+
 	li {
 		margin: 10px;
 	}
@@ -433,7 +483,12 @@ Estilos Responsive Index.html
 	}
 }
 
-@media screen and (max-width: 576px) {
+/*Responsive de Nav*/
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
 	.topnav {
 		a {
 			&:not(:first-child) {
@@ -445,9 +500,13 @@ Estilos Responsive Index.html
 			display: block;
 		}
 	}
+}
+
+
+@media screen and (max-width: 600px) {
 	.topnav.responsive {
 		position: relative;
-		.icon {
+		a.icon {
 			position: absolute;
 			right: 0;
 			top: 0;
@@ -461,6 +520,7 @@ Estilos Responsive Index.html
 }
 
 
+
 /* Estilos Responsive Competencias*/
 
 @media screen and (max-width: 576px) {
@@ -469,6 +529,7 @@ Estilos Responsive Index.html
 		flex-direction: column;
 		align-items: center;
 	}
+
 	.habilidades {
 		.competencias {
 			.mis_competencias {
@@ -488,12 +549,14 @@ Estilos Responsive Index.html
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
 		.ultimos_trabajos {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			margin: 10px;
 			height: auto;
+
 			img {
 				width: 90%;
 			}
@@ -509,11 +572,13 @@ Estilos Responsive Index.html
 		.texto {
 			margin: 20px 0px;
 		}
+
 		.cards {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			width: 90%;
+
 			.card {
 				width: 75%;
 				padding: 10px;
@@ -523,9 +588,9 @@ Estilos Responsive Index.html
 				transition: transform 0.3s;
 				display: flex;
 				align-items: center;
+			}
+		}
 	}
-}
-}
 }
 
 /* Responsive mis Skills para movile */
@@ -535,11 +600,13 @@ Estilos Responsive Index.html
 		.texto {
 			margin: 20px 0px;
 		}
+
 		.cards {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			width: 90%;
+
 			.card {
 				width: 95%;
 				padding: 15px;
@@ -549,9 +616,9 @@ Estilos Responsive Index.html
 				transition: transform 0.3s;
 				display: flex;
 				align-items: center;
+			}
+		}
 	}
-}
-}
 }
 
 
@@ -560,13 +627,14 @@ Estilos Responsive Index.html
 .wrapper_contacto {
 	display: grid;
 	grid-template-areas:
-	  "nav nav nav nav nav"
-	  ". contacto contacto contacto ."
-	  "footer footer footer footer footer";
+		"nav nav nav nav nav"
+		". contacto contacto contacto ."
+		"footer footer footer footer footer";
 	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
 	grid-template-rows: repeat(3);
 	grid-column-gap: 10px;
 	grid-row-gap: 10px;
+
 	.nav {
 		grid-area: nav;
 		background-color: $color-azul;
@@ -577,6 +645,7 @@ Estilos Responsive Index.html
 		justify-content: flex-end;
 		z-index: 100;
 		overflow: hidden;
+
 		.topnav {
 			a {
 				float: left;
@@ -586,21 +655,24 @@ Estilos Responsive Index.html
 				padding: 14px 16px;
 				text-decoration: none;
 				font-size: 17px;
+
 				&:hover {
 					background-color: $color-azul-hover;
 					color: $color-blanco;
 				}
 			}
-				a.active {
-					background-color: $color-verde;
-					color: $color-blanco;
-				}
-				.icon {
-					display: none;
-				}
+
+			a.active {
+				background-color: $color-verde;
+				color: $color-blanco;
+			}
+
+			.icon {
+				display: none;
 			}
 		}
 	}
+}
 
 
 .formulario {
@@ -612,6 +684,7 @@ Estilos Responsive Index.html
 	display: flex;
 	justify-content: center;
 }
+
 .contenido_formulario {
 	width: 80%;
 	background-color: $color-blanco;
@@ -621,6 +694,7 @@ Estilos Responsive Index.html
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
 	.columna_izq {
 		width: 25%;
 		height: 100%;
@@ -629,10 +703,12 @@ Estilos Responsive Index.html
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+
 		.asunto {
 			margin: 10px;
 			text-align: center;
 		}
+
 		.direccion {
 			font-size: 14px;
 			color: $color-negro;
@@ -641,8 +717,12 @@ Estilos Responsive Index.html
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			i {color: $color-negro;}
+
+			i {
+				color: $color-negro;
+			}
 		}
+
 		.telefono {
 			font-size: 14px;
 			color: $color-negro;
@@ -651,8 +731,12 @@ Estilos Responsive Index.html
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			i {color: $color-negro;}
+
+			i {
+				color: $color-negro;
+			}
 		}
+
 		.mail {
 			font-size: 14px;
 			color: $color-negro;
@@ -661,64 +745,76 @@ Estilos Responsive Index.html
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			i {color: $color-negro;}
+
+			i {
+				color: $color-negro;
+			}
 		}
+
 		.texto {
 			font-size: 14px;
 			color: $color-negro;
 		}
 	}
-	
+
 	.columna_der {
 		width: 75%;
 		margin-left: 75px;
+
 		.titulo {
 			font-size: 22px;
 			font-weight: 600;
 			margin: 10px 0px;
 			color: $color-negro;
 		}
+
 		.parrafo {
 			font-size: 14px;
 			font-weight: 600;
 			color: $color-negro;
 			font-weight: 100;
 		}
+
 		.input-box {
 			height: 50px;
 			width: 100%;
 			margin: 12px 0;
+
 			input {
 				height: 100%;
 				width: 100%;
 				border: none;
 				outline: none;
 				font-size: 16px;
-				background:$color-gris;
+				background: $color-gris;
 				border-radius: 6px;
 				padding: 0 15px;
 				resize: none;
 			}
+
 			textarea {
 				height: 100%;
 				width: 100%;
 				border: none;
 				outline: none;
 				font-size: 16px;
-				background:$color-gris;
+				background: $color-gris;
 				border-radius: 6px;
 				padding: 0 15px;
 				resize: none;
 				padding-top: 6px;
 			}
 		}
+
 		.message-box {
 			min-height: 110px;
 		}
+
 		.boton {
 			display: inline-block;
 			margin-top: 12px;
 		}
+
 		.btn {
 			color: $color-blanco;
 			font-size: 18px;
@@ -729,6 +825,7 @@ Estilos Responsive Index.html
 			background-color: $color-azul;
 			cursor: pointer;
 			transition: all 0.3s ease;
+
 			&:hover {
 				background-color: $color-azul-hover;
 			}
@@ -741,27 +838,30 @@ Estilos Footer
 */
 footer {
 	grid-area: footer;
-	background-color:$color-azul;
+	background-color: $color-azul;
 	display: flex;
 	justify-content: space-between;
 }
+
 .contenido {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 .redes_sociales {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
+
 	li {
 		margin: 10px;
 	}
 }
 
 
-/* Responsive para contacto html */ 
+/* Responsive para contacto html */
 
 @media screen and (max-width: 900px) {
 	.wrapper_contacto {
@@ -772,21 +872,25 @@ footer {
 		grid-column-gap: 10px;
 		grid-row-gap: 10px;
 	}
+
 	.formulario {
 		grid-area: contacto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
 		.contenido_formulario {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			width: 95%;
 			padding: 20px 50px 20px 0px;
+
 			.columna_izq {
 				display: none;
 			}
+
 			.columna_der {
 				width: 90%;
 			}
@@ -795,13 +899,14 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-	.contenido{
+	.contenido {
 		display: flex;
 		flex-direction: column;
-	   .redes_sociales{
+
+		.redes_sociales {
 			display: flex;
-			flex-direction:row;
-	  }
+			flex-direction: row;
+		}
 	}
 }
 
@@ -809,7 +914,7 @@ footer {
 
 /*experiencia html*/
 
-.wrapper_experiencia{
+.wrapper_experiencia {
 	display: grid;
 	grid-template-areas: "nav nav nav nav nav" ". experiencia experiencia experiencia ." "footer footer footer footer footer";
 	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
@@ -817,33 +922,36 @@ footer {
 	grid-column-gap: 10px;
 	grid-row-gap: 10px;
 	flex-wrap: wrap;
+
 	.experiencia {
 		grid-area: experiencia;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
-}
+	}
 
 }
 
 .nav {
-    /* Estilos Barra de navegacion  */
-    grid-area: nav;
-    background-color: $color-azul;
-    position: sticky;
-    top: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    z-index: 100;
-    overflow: hidden;
-    .topnav {
+	/* Estilos Barra de navegacion  */
+	grid-area: nav;
+	background-color: $color-azul;
+	position: sticky;
+	top: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	z-index: 100;
+	overflow: hidden;
+
+	.topnav {
 		.active {
 			background-color: $color-verde;
 			color: $color-blanco;
-          }
-        a {
+		}
+
+		a {
 			float: left;
 			display: block;
 			color: $color-blanco;
@@ -851,16 +959,18 @@ footer {
 			padding: 14px 16px;
 			text-decoration: none;
 			font-size: 17px;
+
 			&:hover {
 				background-color: $color-azul-hover;
-				color: black;}
-        }
-      }
-    }
+				color: black;
+			}
+		}
+	}
+}
 
-	
 
-.exp_descripcion{
+
+.exp_descripcion {
 	margin: 10px 0px;
 }
 
@@ -873,11 +983,13 @@ footer {
 	width: 100%;
 	display: inline-block;
 	border-radius: 10px;
+
 	.progress-bar {
 		height: 6px;
 		background: #009b72;
 		border-radius: 10px;
 	}
+
 	.progress-bar-title {
 		position: absolute;
 		left: 0;
@@ -885,6 +997,7 @@ footer {
 		color: $color-gris;
 		font-size: 16px;
 	}
+
 	.progress-bar-number {
 		position: absolute;
 		right: 0;
@@ -903,12 +1016,12 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 	margin-right: 0px !important;
 	padding-left: 0px !important;
 	padding-right: 0px !important;
-  }
+}
 
-  .alinear_copy_v {
+.alinear_copy_v {
 	display: flex;
 	align-items: center;
-  }
+}
 
 
 
@@ -924,23 +1037,25 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 	flex-wrap: wrap;
 }
 
- /* Estilos Barra de navegacion  */
+/* Estilos Barra de navegacion  */
 .nav {
-    grid-area: nav;
-    background-color: $color-azul;
-    position: sticky;
-    top: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    z-index: 100;
-    overflow: hidden;
-    .topnav {
+	grid-area: nav;
+	background-color: $color-azul;
+	position: sticky;
+	top: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	z-index: 100;
+	overflow: hidden;
+
+	.topnav {
 		.active {
 			background-color: $color-verde;
 			color: $color-blanco;
-          }
-        a {
+		}
+
+		a {
 			float: left;
 			display: block;
 			color: $color-blanco;
@@ -948,12 +1063,14 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 			padding: 14px 16px;
 			text-decoration: none;
 			font-size: 17px;
+
 			&:hover {
 				background-color: $color-azul-hover;
-				color: black;}
-        }
-      }
-    }
+				color: black;
+			}
+		}
+	}
+}
 
 
 .proyectos {
@@ -962,9 +1079,11 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+
 	.container {
 		padding-bottom: 60px;
 		padding-top: 60px;
+
 		.encabezado {
 			margin-bottom: 50px;
 			text-align: center;
@@ -981,30 +1100,33 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 		}
 	}
 }
+
 .card_proyectos {
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
 	transition: 0.4s ease;
 	margin-bottom: 30px;
+
 	p {
 		font-size: 14px;
 	}
+
 	a {
 		color: $color-gris;
 	}
+
 	&:hover {
 		text-decoration: none;
 		transform: translateY(-10px) scale(1.02);
 		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
 	}
 }
+
 .cuerpo_card {
 	text-align: center;
 }
+
 .card_imagen {
 	width: 100%;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
-
-
-
