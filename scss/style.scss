@@ -1129,3 +1129,55 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
+
+
+
+/* estilos blogs */
+
+
+.blog-post {
+	-webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+	.blog-img {
+		.overlay {
+			position: absolute;
+			opacity: 0;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		.post-meta {
+			position: absolute;
+			opacity: 0;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			bottom: 5%;
+			right: 5%;
+			z-index: 1;
+		}
+	}
+	&:hover {
+		-webkit-transform: translateY(-7px);
+		transform: translateY(-7px);
+		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+		.blog-img {
+			.overlay {
+				opacity: 0.65;
+			}
+			.post-meta {
+				opacity: 1;
+			}
+		}
+	}
+}
+.avatar.avatar-ex-sm {
+	height: 36px;
+}
+.shadow {
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
+}
