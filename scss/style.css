@@ -28,16 +28,7 @@ body {
   font-family: golos_regular, verdana, sans-serif;
 }
 
-/* Estilos Index.html */
-.wrapper {
-  display: grid;
-  grid-template-areas: "nav nav nav nav nav" ". header header header ." "habilidades habilidades habilidades habilidades habilidades" "portfolio portfolio portfolio portfolio portfolio" "skills skills skills skills skills" ". contacto contacto contacto ." "footer footer footer footer footer";
-  grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-  grid-template-rows: repeat(7);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-}
-
+/*barra de navegacion */
 .nav {
   grid-area: nav;
   background-color: #3a98b9;
@@ -74,7 +65,66 @@ body {
   display: none;
 }
 
-/* Estilos Header */
+/* media query  de barra de navegacion */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/*  Estilos Footer */
+footer {
+  grid-area: footer;
+  background-color: #3a98b9;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenido {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redes_sociales {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.redes_sociales li {
+  margin: 10px;
+}
+
+/* Estilos pagina Index.html */
+.wrapper {
+  display: grid;
+  grid-template-areas: "nav nav nav nav nav" ". header header header ." "habilidades habilidades habilidades habilidades habilidades" "portfolio portfolio portfolio portfolio portfolio" "skills skills skills skills skills" ". contacto contacto contacto ." "footer footer footer footer footer";
+  grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+  grid-template-rows: repeat(7);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+/* Estilos seccion  Header */
 .header {
   grid-area: header;
   height: 80vh;
@@ -140,7 +190,7 @@ body {
 }
 
 /*
-Estilos Habilidades
+Estilos seccion  Habilidades
 */
 .habilidades {
   grid-area: habilidades;
@@ -186,7 +236,7 @@ Estilos Habilidades
 }
 
 /*
-Estilos Portfolio
+Estilos seccion Portfolio
 */
 .portfolio {
   grid-area: portfolio;
@@ -223,7 +273,7 @@ Estilos Portfolio
   filter: contrast(140%);
 }
 
-/*  Estilos Mis Skills */
+/*  Estilos seccion Mis Skills */
 .skills {
   grid-area: skills;
   background-color: #e8d5c4;
@@ -280,7 +330,7 @@ Estilos Portfolio
   text-align: center;
 }
 
-/*  Estilos Contacto  */
+/*  Estilos seccion Contacto  */
 .contacto {
   grid-area: contacto;
   display: flex;
@@ -328,30 +378,6 @@ Estilos Portfolio
   color: #f5f3f3;
 }
 
-/*  Estilos Footer */
-footer {
-  grid-area: footer;
-  background-color: #3a98b9;
-  display: flex;
-  justify-content: space-between;
-}
-
-.contenido {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.redes_sociales {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-}
-.redes_sociales li {
-  margin: 10px;
-}
-
 /*
 Estilos Responsive Index.html
 */
@@ -366,32 +392,7 @@ Estilos Responsive Index.html
     background-color: #fff1dc;
   }
 }
-/* media query  de barra de navegacion */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-@media screen and (max-width: 576px) {
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-/* Estilos Responsive Competencias*/
+/* Estilos Responsive seccion Competencias*/
 @media screen and (max-width: 576px) {
   .competencias {
     display: flex;
@@ -404,7 +405,7 @@ Estilos Responsive Index.html
     padding: 0px;
     background-color: #f5f3f3;
   }
-  /* Estilos responsive Portfolio*/
+  /* Estilos responsive seccion Portfolio*/
   .portfolio {
     grid-area: portfolio;
     display: flex;
@@ -423,7 +424,7 @@ Estilos Responsive Index.html
     width: 90%;
   }
 }
-/* Responsive mis Skills para tablet*/
+/* Responsive seccion mis Skills para tablet */
 @media only screen and (min-width: 576px) and (max-width: 999px) {
   .skills .texto {
     margin: 20px 0px;
@@ -445,7 +446,7 @@ Estilos Responsive Index.html
     align-items: center;
   }
 }
-/* Responsive mis Skills para movile */
+/* Responsive seccion mis Skills para mobile */
 @media only screen and (min-width: 1px) and (max-width: 575px) {
   .skills .texto {
     margin: 20px 0px;
@@ -616,32 +617,6 @@ Estilos Responsive Index.html
   background-color: #2a6c85;
 }
 
-/*
-Estilos Footer
-*/
-footer {
-  grid-area: footer;
-  background-color: #3a98b9;
-  display: flex;
-  justify-content: space-between;
-}
-
-.contenido {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.redes_sociales {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-}
-.redes_sociales li {
-  margin: 10px;
-}
-
 /* Responsive para contacto html */
 @media screen and (max-width: 900px) {
   .wrapper_contacto {
@@ -683,7 +658,7 @@ footer {
     flex-direction: row;
   }
 }
-/*experiencia html*/
+/*Estilos Experiencia html*/
 .wrapper_experiencia {
   display: grid;
   grid-template-areas: "nav nav nav nav nav" ". experiencia experiencia experiencia ." "footer footer footer footer footer";
@@ -750,7 +725,7 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
   align-items: center;
 }
 
-/* Estilos para la pagina de Proyectos  */
+/* Estilos para la pagina de Proyectos.html  */
 .wrapper_proyectos {
   display: grid;
   grid-template-areas: "nav nav nav nav nav" ". proyectos proyectos proyectos ." "footer footer footer footer footer";
@@ -810,7 +785,7 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
   border-top-right-radius: 10px;
 }
 
-/* estilos blogs */
+/* Estilos Blogs.html */
 .blog-post {
   -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
@@ -849,9 +824,4 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 
 .avatar.avatar-ex-sm {
   height: 36px;
-}
-
-.shadow {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) !important;
 }/*# sourceMappingURL=style.css.map */

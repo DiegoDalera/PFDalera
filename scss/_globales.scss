@@ -1,0 +1,28 @@
+/*
+Estilos Globales
+*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: golos_regular;
+	src: url(../fonts/GolosText-Regular.ttf);
+}
+
+a {
+	color: $color-blanco;
+	text-decoration: none;
+}
+
+i {
+	font-size: 1.5em;
+}
+
+body {
+	background-color: $color-cream;
+	font-family: $tipografia-general;
+}
