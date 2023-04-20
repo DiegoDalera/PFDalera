@@ -15,4 +15,9 @@ $fuente-normal: 1em;
 $fuente-pequena: 0.8em;
 $fuente-grande: 1.4em;
 
-$tipografia-general: golos_regular, verdana, sans-serif;
+@font-face {
+	font-family: golos_regular;
+	src: url(../fonts/GolosText-Regular.ttf);
+}
+
+$tipografia: golos_regular, verdana, sans-serif;

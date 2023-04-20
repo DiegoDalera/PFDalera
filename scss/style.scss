@@ -460,6 +460,8 @@ Estilos Responsive Index.html
 .formulario {
 	grid-area: contacto;
 	width: 100%;
+	height: 80vh;
+	margin: 10px 0px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1em;
@@ -654,17 +656,7 @@ Estilos Responsive Index.html
 	}
 }
 
-@media screen and (max-width: 900px) {
-	.contenido {
-		display: flex;
-		flex-direction: column;
 
-		.redes_sociales {
-			display: flex;
-			flex-direction: row;
-		}
-	}
-}
 
 
 /*Estilos Experiencia html*/

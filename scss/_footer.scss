@@ -25,3 +25,16 @@ footer {
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.contenido {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10px;
+		.redes_sociales {
+			display: flex;
+			flex-direction: row;
+
+		}
+	}
+
+}
