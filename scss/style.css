@@ -1,6 +1,10 @@
 /*
 Variables 
 */
+@font-face {
+  font-family: golos_regular;
+  src: url(../fonts/GolosText-Regular.ttf);
+}
 /*
 Estilos Globales
 */
@@ -10,10 +14,6 @@ Estilos Globales
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: golos_regular;
-  src: url(../fonts/GolosText-Regular.ttf);
-}
 a {
   color: #f5f3f3;
   text-decoration: none;
@@ -114,6 +114,17 @@ footer {
   margin: 10px;
 }
 
+@media screen and (max-width: 900px) {
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .contenido .redes_sociales {
+    display: flex;
+    flex-direction: row;
+  }
+}
 /* Estilos pagina Index.html */
 .wrapper {
   display: grid;
@@ -481,11 +492,18 @@ Estilos Responsive Index.html
 .formulario {
   grid-area: contacto;
   width: 100%;
+  height: 100vh;
+  margin: 10px 0px;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.formulario .titulo_principal {
+  margin-bottom: 20px;
 }
 
 .contenido_formulario {
@@ -648,16 +666,6 @@ Estilos Responsive Index.html
     width: 90%;
   }
 }
-@media screen and (max-width: 900px) {
-  .contenido {
-    display: flex;
-    flex-direction: column;
-  }
-  .contenido .redes_sociales {
-    display: flex;
-    flex-direction: row;
-  }
-}
 /*Estilos Experiencia html*/
 .wrapper_experiencia {
   display: grid;
@@ -674,6 +682,11 @@ Estilos Responsive Index.html
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.centrar_titulo {
+  text-align: center;
+  margin: 20px;
 }
 
 .exp_descripcion {
@@ -708,21 +721,6 @@ Estilos Responsive Index.html
   top: -30px;
   font-weight: 600;
   font-size: 14px;
-}
-
-/*
-la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap y que no me dejaba hacerlo responsive 100%
-*/
-.reset {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-}
-
-.alinear_copy_v {
-  display: flex;
-  align-items: center;
 }
 
 /* Estilos para la pagina de Proyectos.html  */
@@ -785,7 +783,7 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
   border-top-right-radius: 10px;
 }
 
-/* Estilos Blogs.html */
+/* Estilos para la pagina Blogs.html */
 .blog-post {
   -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
@@ -824,4 +822,14 @@ la clase reset la uso para resetear a 0 unos paddings que viene con el boostrap 
 
 .avatar.avatar-ex-sm {
   height: 36px;
+}
+
+/*
+La clase reset la uso para resetear a 0 unos paddings que viene con el boostrap y que no me dejaba hacerlo responsive 100%
+*/
+.reset {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }/*# sourceMappingURL=style.css.map */
