@@ -468,7 +468,8 @@ Estilos Responsive Index.html
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	.titulo_principal{
+
+	.titulo_principal {
 		margin-bottom: 20px;
 	}
 }
@@ -684,7 +685,11 @@ Estilos Responsive Index.html
 
 }
 
-.centrar_titulo{
+.texto_experiencia {
+	text-align: justify;
+}
+
+.centrar_titulo {
 	text-align: center;
 	margin: 20px
 }
@@ -792,6 +797,7 @@ Estilos Responsive Index.html
 
 .cuerpo_card {
 	text-align: center;
+	margin: 10px;
 }
 
 .card_imagen {
@@ -805,9 +811,33 @@ Estilos Responsive Index.html
 /* Estilos para la pagina Blogs.html */
 
 
+.wrapper_blog {
+	display: grid;
+	grid-template-areas: "nav nav nav nav nav" ". blog blog blog ." "footer footer footer footer footer";
+	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+	grid-template-rows: repeat(3);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	flex-wrap: wrap;
+}
+
+.blog {
+	grid-area: blog;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.titulo_blog {
+	margin: 30px;
+}
+
+
 .blog-post {
 	-webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
 	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+
 	.blog-img {
 		.overlay {
 			position: absolute;
@@ -819,6 +849,7 @@ Estilos Responsive Index.html
 			bottom: 0;
 			left: 0;
 		}
+
 		.post-meta {
 			position: absolute;
 			opacity: 0;
@@ -829,21 +860,25 @@ Estilos Responsive Index.html
 			z-index: 1;
 		}
 	}
+
 	&:hover {
 		-webkit-transform: translateY(-7px);
 		transform: translateY(-7px);
 		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
 		.blog-img {
 			.overlay {
 				opacity: 0.65;
 			}
+
 			.post-meta {
 				opacity: 1;
 			}
 		}
 	}
 }
+
 .avatar.avatar-ex-sm {
 	height: 36px;
 }

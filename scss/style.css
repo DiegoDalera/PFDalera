@@ -684,6 +684,10 @@ Estilos Responsive Index.html
   justify-content: center;
 }
 
+.texto_experiencia {
+  text-align: justify;
+}
+
 .centrar_titulo {
   text-align: center;
   margin: 20px;
@@ -775,6 +779,7 @@ Estilos Responsive Index.html
 
 .cuerpo_card {
   text-align: center;
+  margin: 10px;
 }
 
 .card_imagen {
@@ -784,6 +789,28 @@ Estilos Responsive Index.html
 }
 
 /* Estilos para la pagina Blogs.html */
+.wrapper_blog {
+  display: grid;
+  grid-template-areas: "nav nav nav nav nav" ". blog blog blog ." "footer footer footer footer footer";
+  grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+  grid-template-rows: repeat(3);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.blog {
+  grid-area: blog;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.titulo_blog {
+  margin: 30px;
+}
+
 .blog-post {
   -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
