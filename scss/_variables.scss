@@ -10,10 +10,7 @@ $color-blanco: #f5f3f3;
 $color-negro: rgb(0, 0, 0, 0.9);
 $color-verde: rgb(4, 89, 14);
 $color-gris: #b2b6b7;
-
-$fuente-normal: 1em;
-$fuente-pequena: 0.8em;
-$fuente-grande: 1.4em;
+$color-rojo:rgb(255, 0, 0);
 
 @font-face {
   font-family: golos_regular;
@@ -21,3 +18,6 @@ $fuente-grande: 1.4em;
 }
 
 $tipografia: golos_regular, verdana, sans-serif;
+
+
+

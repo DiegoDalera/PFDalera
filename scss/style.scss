@@ -31,6 +31,7 @@
 	background-image: url(../img/img_portada.webp);
 	background-attachment: fixed;
 	background-size: cover;
+	background-position: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -329,308 +330,139 @@ Estilos seccion Portfolio
 /*
 Estilos Responsive Index.html
 */
+
+
 @media screen and (max-width: 576px) {
-	.wrapper {
-		display: grid;
-		grid-template-areas: "nav" "header" "habilidades" "portfolio" "skills" "contacto" "footer";
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(7);
-		grid-column-gap: 10px;
-		grid-row-gap: 10px;
-		background-color: $color-cream;
+
+	.header {
+
+
 	}
 }
 
-/* Estilos Responsive seccion Competencias*/
 
-@media screen and (max-width: 576px) {
-	.competencias {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	@media screen and (max-width: 576px) {
+		.wrapper {
+			display: grid;
+			grid-template-areas: "nav" "header" "habilidades" "portfolio" "skills" "contacto" "footer";
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(7);
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+			background-color: $color-cream;
+		}
 	}
 
-	.habilidades {
+	/* Estilos Responsive seccion Competencias*/
+
+	@media screen and (max-width: 576px) {
 		.competencias {
-			.mis_competencias {
-				width: 100%;
-				margin: 20px 0px;
-				padding: 0px;
-				background-color: $color-blanco;
-			}
-		}
-	}
-
-	/* Estilos responsive seccion Portfolio*/
-
-	.portfolio {
-		grid-area: portfolio;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		.ultimos_trabajos {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin: 10px;
-			height: auto;
+		}
 
-			img {
-				width: 90%;
+		.habilidades {
+			.competencias {
+				.mis_competencias {
+					width: 100%;
+					margin: 20px 0px;
+					padding: 0px;
+					background-color: $color-blanco;
+				}
 			}
 		}
-	}
-}
 
-/* Responsive seccion mis Skills para tablet */
+		/* Estilos responsive seccion Portfolio*/
 
-@media only screen and (min-width: 576px) and (max-width: 999px) {
-	.skills {
-		.texto {
-			margin: 20px 0px;
-		}
-
-		.cards {
+		.portfolio {
+			grid-area: portfolio;
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			align-items: center;
-			width: 90%;
 
-			.card {
-				width: 75%;
-				padding: 10px;
+			.ultimos_trabajos {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 				margin: 10px;
-				background-color: $color-blanco;
-				border-radius: 3px;
-				transition: transform 0.3s;
+				height: auto;
+
+				img {
+					width: 90%;
+				}
+			}
+		}
+	}
+
+	/* Responsive seccion mis Skills para tablet */
+
+	@media only screen and (min-width: 576px) and (max-width: 999px) {
+		.skills {
+			.texto {
+				margin: 20px 0px;
+			}
+
+			.cards {
 				display: flex;
+				flex-direction: column;
 				align-items: center;
+				width: 90%;
+
+				.card {
+					width: 75%;
+					padding: 10px;
+					margin: 10px;
+					background-color: $color-blanco;
+					border-radius: 3px;
+					transition: transform 0.3s;
+					display: flex;
+					align-items: center;
+				}
 			}
 		}
 	}
-}
 
-/* Responsive seccion mis Skills para mobile */
+	/* Responsive seccion mis Skills para mobile */
 
-@media only screen and (min-width: 1px) and (max-width: 575px) {
-	.skills {
-		.texto {
-			margin: 20px 0px;
-		}
+	@media only screen and (min-width: 1px) and (max-width: 575px) {
+		.skills {
+			.texto {
+				margin: 20px 0px;
+			}
 
-		.cards {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 90%;
-
-			.card {
-				width: 95%;
-				padding: 15px;
-				margin: 15px;
-				background-color: $color-blanco;
-				border-radius: 3px;
-				transition: transform 0.3s;
+			.cards {
 				display: flex;
+				flex-direction: column;
 				align-items: center;
+				width: 90%;
+
+				.card {
+					width: 95%;
+					padding: 15px;
+					margin: 15px;
+					background-color: $color-blanco;
+					border-radius: 3px;
+					transition: transform 0.3s;
+					display: flex;
+					align-items: center;
+				}
 			}
 		}
 	}
-}
 
 
 
-/*  Estilos de la pagina Contacto.Html  */
+	/*  Estilos de la pagina Contacto.Html  */
 
-.wrapper_contacto {
-	display: grid;
-	grid-template-areas:
-		"nav nav nav nav nav"
-		". contacto contacto contacto ."
-		"footer footer footer footer footer";
-	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-	grid-template-rows: repeat(3);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-}
-
-.formulario {
-	grid-area: contacto;
-	width: 100%;
-	height: 100vh;
-	margin: 10px 0px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 1em;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	.titulo_principal {
-		margin-bottom: 20px;
-	}
-}
-
-.contenido_formulario {
-	width: 80%;
-	background-color: $color-blanco;
-	border-radius: 6px;
-	padding: 20px 50px 20px 30px;
-	box-shadow: 0 5px 10px rgba(129, 128, 128, 0.2);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-	.columna_izq {
-		width: 25%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin-top: 10px;
-
-		.asunto {
-			margin: 10px;
-			text-align: center;
-		}
-
-		.direccion {
-			font-size: 14px;
-			color: $color-negro;
-			margin-bottom: 10px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			i {
-				color: $color-negro;
-			}
-		}
-
-		.telefono {
-			font-size: 14px;
-			color: $color-negro;
-			margin-bottom: 10px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			i {
-				color: $color-negro;
-			}
-		}
-
-		.mail {
-			font-size: 14px;
-			color: $color-negro;
-			margin-bottom: 10px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			i {
-				color: $color-negro;
-			}
-		}
-
-		.texto {
-			font-size: 14px;
-			color: $color-negro;
-		}
-	}
-
-	.columna_der {
-		width: 75%;
-		margin-left: 75px;
-
-		.titulo {
-			font-size: 22px;
-			font-weight: 600;
-			margin: 10px 0px;
-			color: $color-negro;
-		}
-
-		.parrafo {
-			font-size: 14px;
-			font-weight: 600;
-			color: $color-negro;
-			font-weight: 100;
-		}
-
-		.input-box {
-			height: 50px;
-			width: 100%;
-			margin: 12px 0;
-
-			input {
-				height: 100%;
-				width: 100%;
-				border: none;
-				outline: none;
-				font-size: 16px;
-				background: $color-gris;
-				border-radius: 6px;
-				padding: 0 15px;
-				resize: none;
-			}
-
-			textarea {
-				height: 100%;
-				width: 100%;
-				border: none;
-				outline: none;
-				font-size: 16px;
-				background: $color-gris;
-				border-radius: 6px;
-				padding: 0 15px;
-				resize: none;
-				padding-top: 6px;
-			}
-		}
-
-		.message-box {
-			min-height: 110px;
-		}
-
-		.boton {
-			display: inline-block;
-			margin-top: 12px;
-		}
-
-		.btn {
-			color: $color-blanco;
-			font-size: 18px;
-			outline: none;
-			border: none;
-			padding: 10px;
-			border-radius: 6px;
-			background-color: $color-azul;
-			cursor: pointer;
-			transition: all 0.3s ease;
-
-			&:hover {
-				background-color: $color-azul-hover;
-			}
-		}
-	}
-}
-
-
-
-/* Responsive para contacto html */
-
-@media screen and (max-width: 900px) {
 	.wrapper_contacto {
 		display: grid;
-		grid-template-areas: "nav" "contacto" "footer";
-		grid-template-columns: 1fr;
+		grid-template-areas:
+			"nav nav nav nav nav"
+			". contacto contacto contacto ."
+			"footer footer footer footer footer";
+		grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
 		grid-template-rows: repeat(3);
 		grid-column-gap: 10px;
 		grid-row-gap: 10px;
@@ -638,257 +470,479 @@ Estilos Responsive Index.html
 
 	.formulario {
 		grid-area: contacto;
+		width: 100%;
+		height: 100vh;
+		margin: 10px 0px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1em;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
+		align-items: center;
 
-		.contenido_formulario {
+		.titulo_principal {
+			margin-bottom: 20px;
+		}
+	}
+
+	.contenido_formulario {
+		width: 80%;
+		background-color: $color-blanco;
+		border-radius: 6px;
+		padding: 20px 50px 20px 30px;
+		box-shadow: 0 5px 10px rgba(129, 128, 128, 0.2);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.columna_izq {
+			width: 25%;
+			height: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			width: 95%;
-			padding: 20px 50px 20px 0px;
+			justify-content: center;
+			margin-top: 10px;
 
-			.columna_izq {
-				display: none;
+			.asunto {
+				margin: 10px;
+				text-align: center;
 			}
 
-			.columna_der {
-				width: 90%;
+			.direccion {
+				font-size: 14px;
+				color: $color-negro;
+				margin-bottom: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				i {
+					color: $color-negro;
+				}
+			}
+
+			.telefono {
+				font-size: 14px;
+				color: $color-negro;
+				margin-bottom: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				i {
+					color: $color-negro;
+				}
+			}
+
+			.mail {
+				font-size: 14px;
+				color: $color-negro;
+				margin-bottom: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				i {
+					color: $color-negro;
+				}
+			}
+
+			.texto {
+				font-size: 14px;
+				color: $color-negro;
+			}
+		}
+
+		.columna_der {
+			width: 75%;
+			margin-left: 75px;
+
+			.titulo {
+				font-size: 22px;
+				font-weight: 600;
+				margin: 10px 0px;
+				color: $color-negro;
+			}
+
+			.parrafo {
+				font-size: 14px;
+				font-weight: 600;
+				color: $color-negro;
+				font-weight: 100;
+			}
+
+			.input-box {
+				height: 50px;
+				width: 100%;
+				margin: 12px 0;
+
+				input {
+					height: 100%;
+					width: 100%;
+					border: none;
+					outline: none;
+					font-size: 16px;
+					background: $color-gris;
+					border-radius: 6px;
+					padding: 0 15px;
+					resize: none;
+				}
+
+				textarea {
+					height: 100%;
+					width: 100%;
+					border: none;
+					outline: none;
+					font-size: 16px;
+					background: $color-gris;
+					border-radius: 6px;
+					padding: 0 15px;
+					resize: none;
+					padding-top: 6px;
+				}
+			}
+
+			.message-box {
+				min-height: 110px;
+			}
+
+			.boton {
+				display: inline-block;
+				margin-top: 12px;
+			}
+
+			.btn {
+				color: $color-blanco;
+				font-size: 18px;
+				outline: none;
+				border: none;
+				padding: 10px;
+				border-radius: 6px;
+				background-color: $color-azul;
+				cursor: pointer;
+				transition: all 0.3s ease;
+
+				&:hover {
+					background-color: $color-azul-hover;
+				}
 			}
 		}
 	}
-}
+
+
+
+	/* Responsive para contacto html */
+
+	@media screen and (max-width: 900px) {
+		.wrapper_contacto {
+			display: grid;
+			grid-template-areas: "nav" "contacto" "footer";
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3);
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+		}
+
+		.formulario {
+			grid-area: contacto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.contenido_formulario {
+				display: flex;
+				flex-direction: column-reverse;
+				align-items: center;
+				width: 95%;
+				padding: 20px 50px 20px 0px;
+
+				.columna_izq {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+					width: 100%;
+				}
+
+				.columna_der {
+					width: 90%;
+				}
+			}
+		}
+	}
+
+	/* Responsive para contacto html */
+
+	@media screen and (max-width: 576px) {
+		.wrapper_contacto {
+			display: grid;
+			grid-template-areas: "nav" "contacto" "footer";
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3);
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+		}
+
+		.formulario {
+			grid-area: contacto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.contenido_formulario {
+				display: flex;
+				flex-direction: column-reverse;
+				align-items: center;
+				width: 95%;
+				padding: 20px 50px 20px 0px;
+
+				.columna_izq {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+				}
+
+				.columna_der {
+					width: 90%;
+				}
+			}
+		}
+	}
 
 
 
 
-/*Estilos Experiencia html*/
+	/*Estilos Experiencia html*/
 
-.wrapper_experiencia {
-	display: grid;
-	grid-template-areas: "nav nav nav nav nav" ". experiencia experiencia experiencia ." "footer footer footer footer footer";
-	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-	grid-template-rows: repeat(3);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	flex-wrap: wrap;
+	.wrapper_experiencia {
+		display: grid;
+		grid-template-areas: "nav nav nav nav nav" ". experiencia experiencia experiencia ." "footer footer footer footer footer";
+		grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+		grid-template-rows: repeat(3);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		flex-wrap: wrap;
 
-	.experiencia {
-		grid-area: experiencia;
+		.experiencia {
+			grid-area: experiencia;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+	}
+
+	.texto_experiencia {
+		text-align: justify;
+	}
+
+	.centrar_titulo {
+		text-align: center;
+		margin: 20px
+	}
+
+	.exp_descripcion {
+		margin: 10px 0px;
+	}
+
+	.progress {
+		position: relative;
+		overflow: inherit;
+		height: 6px;
+		margin: 30px 0px 15px;
+		width: 100%;
+		display: inline-block;
+		border-radius: 10px;
+
+		.progress-bar {
+			height: 6px;
+			background: #009b72;
+			border-radius: 10px;
+		}
+
+		.progress-bar-title {
+			position: absolute;
+			left: 0;
+			top: -30px;
+			color: $color-gris;
+			font-size: 16px;
+		}
+
+		.progress-bar-number {
+			position: absolute;
+			right: 0;
+			color: $color-gris;
+			top: -30px;
+			font-weight: 600;
+			font-size: 14px;
+		}
+	}
+
+
+
+
+
+	/* Estilos para la pagina de Proyectos.html  */
+
+	.wrapper_proyectos {
+		display: grid;
+		grid-template-areas: "nav nav nav nav nav" ". proyectos proyectos proyectos ." "footer footer footer footer footer";
+		grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+		grid-template-rows: repeat(3);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	.proyectos {
+		grid-area: proyectos;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.container {
+			padding-bottom: 60px;
+			padding-top: 60px;
+
+			.encabezado {
+				margin-bottom: 50px;
+				text-align: center;
+			}
+		}
+	}
+
+	.container {
+		.encabezado {
+			h2 {
+				font-weight: bold;
+				font-size: 1.6rem;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.card_proyectos {
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+		transition: 0.4s ease;
+		margin-bottom: 30px;
+
+		p {
+			font-size: 14px;
+		}
+
+		a {
+			color: $color-gris;
+		}
+
+		&:hover {
+			text-decoration: none;
+			transform: translateY(-10px) scale(1.02);
+			box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+		}
+	}
+
+	.cuerpo_card {
+		text-align: center;
+		margin: 10px;
+	}
+
+	.card_imagen {
+		width: 100%;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+
+
+	/* Estilos para la pagina Blogs.html */
+
+
+	.wrapper_blog {
+		display: grid;
+		grid-template-areas: "nav nav nav nav nav" ". blog blog blog ." "footer footer footer footer footer";
+		grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
+		grid-template-rows: repeat(3);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	.blog {
+		grid-area: blog;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
-}
-
-.texto_experiencia {
-	text-align: justify;
-}
-
-.centrar_titulo {
-	text-align: center;
-	margin: 20px
-}
-
-.exp_descripcion {
-	margin: 10px 0px;
-}
-
-.progress {
-	position: relative;
-	overflow: inherit;
-	height: 6px;
-	margin: 30px 0px 15px;
-	width: 100%;
-	display: inline-block;
-	border-radius: 10px;
-
-	.progress-bar {
-		height: 6px;
-		background: #009b72;
-		border-radius: 10px;
+	.titulo_blog {
+		margin: 30px;
 	}
 
-	.progress-bar-title {
-		position: absolute;
-		left: 0;
-		top: -30px;
-		color: $color-gris;
-		font-size: 16px;
-	}
 
-	.progress-bar-number {
-		position: absolute;
-		right: 0;
-		color: $color-gris;
-		top: -30px;
-		font-weight: 600;
-		font-size: 14px;
-	}
-}
-
-
-
-
-
-/* Estilos para la pagina de Proyectos.html  */
-
-.wrapper_proyectos {
-	display: grid;
-	grid-template-areas: "nav nav nav nav nav" ". proyectos proyectos proyectos ." "footer footer footer footer footer";
-	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-	grid-template-rows: repeat(3);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	flex-wrap: wrap;
-}
-
-.proyectos {
-	grid-area: proyectos;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	.container {
-		padding-bottom: 60px;
-		padding-top: 60px;
-
-		.encabezado {
-			margin-bottom: 50px;
-			text-align: center;
-		}
-	}
-}
-
-.container {
-	.encabezado {
-		h2 {
-			font-weight: bold;
-			font-size: 1.6rem;
-			text-transform: uppercase;
-		}
-	}
-}
-
-.card_proyectos {
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-	transition: 0.4s ease;
-	margin-bottom: 30px;
-
-	p {
-		font-size: 14px;
-	}
-
-	a {
-		color: $color-gris;
-	}
-
-	&:hover {
-		text-decoration: none;
-		transform: translateY(-10px) scale(1.02);
-		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
-	}
-}
-
-.cuerpo_card {
-	text-align: center;
-	margin: 10px;
-}
-
-.card_imagen {
-	width: 100%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-}
-
-
-
-/* Estilos para la pagina Blogs.html */
-
-
-.wrapper_blog {
-	display: grid;
-	grid-template-areas: "nav nav nav nav nav" ". blog blog blog ." "footer footer footer footer footer";
-	grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
-	grid-template-rows: repeat(3);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	flex-wrap: wrap;
-}
-
-.blog {
-	grid-area: blog;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.titulo_blog {
-	margin: 30px;
-}
-
-
-.blog-post {
-	-webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
-	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
-
-	.blog-img {
-		.overlay {
-			position: absolute;
-			opacity: 0;
-			-webkit-transition: all 0.5s ease;
-			transition: all 0.5s ease;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-
-		.post-meta {
-			position: absolute;
-			opacity: 0;
-			-webkit-transition: all 0.5s ease;
-			transition: all 0.5s ease;
-			bottom: 5%;
-			right: 5%;
-			z-index: 1;
-		}
-	}
-
-	&:hover {
-		-webkit-transform: translateY(-7px);
-		transform: translateY(-7px);
-		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	.blog-post {
+		-webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+		transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
 
 		.blog-img {
 			.overlay {
-				opacity: 0.65;
+				position: absolute;
+				opacity: 0;
+				-webkit-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
 			}
 
 			.post-meta {
-				opacity: 1;
+				position: absolute;
+				opacity: 0;
+				-webkit-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				bottom: 5%;
+				right: 5%;
+				z-index: 1;
+			}
+		}
+
+		&:hover {
+			-webkit-transform: translateY(-7px);
+			transform: translateY(-7px);
+			-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+			.blog-img {
+				.overlay {
+					opacity: 0.65;
+				}
+
+				.post-meta {
+					opacity: 1;
+				}
 			}
 		}
 	}
-}
 
-.avatar.avatar-ex-sm {
-	height: 36px;
-}
+	.avatar.avatar-ex-sm {
+		height: 36px;
+	}
 
-/*
+	/*
 La clase reset la uso para resetear a 0 unos paddings que viene con el boostrap y que no me dejaba hacerlo responsive 100%
 */
-.reset {
-	margin-left: 0px !important;
-	margin-right: 0px !important;
-	padding-left: 0px !important;
-	padding-right: 0px !important;
-}
+	.reset {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
