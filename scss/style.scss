@@ -45,12 +45,14 @@
 			color: $color-negro;
 			margin: 10px;
 			margin: 10px 0px;
+			font-weight: 800;
 		}
 
 		h2 {
 			color: $color-negro;
 			margin: 10px;
 			margin: 10px 0px;
+			font-weight: 500;
 		}
 
 		.btn {
@@ -504,16 +506,18 @@ Estilos Responsive Index.html
 			align-items: center;
 			justify-content: center;
 			margin-top: 10px;
-
+			p{
+				margin: 0px;
+			}
 			.asunto {
-				margin: 10px;
+				margin: 5px;
 				text-align: center;
 			}
 
 			.direccion {
 				font-size: 14px;
 				color: $color-negro;
-				margin-bottom: 10px;
+				margin: 10px 0px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -527,7 +531,7 @@ Estilos Responsive Index.html
 			.telefono {
 				font-size: 14px;
 				color: $color-negro;
-				margin-bottom: 10px;
+				margin: 10px 0px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -541,7 +545,7 @@ Estilos Responsive Index.html
 			.mail {
 				font-size: 14px;
 				color: $color-negro;
-				margin-bottom: 10px;
+				margin: 10px 0px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -555,6 +559,7 @@ Estilos Responsive Index.html
 			.texto {
 				font-size: 14px;
 				color: $color-negro;
+				margin: 5px;
 			}
 		}
 
@@ -654,6 +659,7 @@ Estilos Responsive Index.html
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			margin-bottom: 80px;
 
 			.contenido_formulario {
 				display: flex;
@@ -666,7 +672,9 @@ Estilos Responsive Index.html
 					display: flex;
 					flex-direction: row;
 					justify-content: space-around;
-					width: 100%;
+					align-items:baseline;
+					width: 90%;
+					margin-bottom: 10px;
 				}
 
 				.columna_der {
@@ -676,7 +684,6 @@ Estilos Responsive Index.html
 		}
 	}
 
-	/* Responsive para contacto html */
 
 	@media screen and (max-width: 576px) {
 		.wrapper_contacto {
@@ -703,10 +710,9 @@ Estilos Responsive Index.html
 				padding: 20px 50px 20px 0px;
 
 				.columna_izq {
-					display: flex;
-					flex-direction: column;
-					width: 100%;
+					display:none;
 				}
+
 
 				.columna_der {
 					width: 90%;
