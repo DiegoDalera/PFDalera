@@ -1,5 +1,5 @@
 # PFDalera
-Trabajo Practico Coderhouse - Diseño  Web
+Trabajo Practico Final Coderhouse - Diseño  Web
 Tecnologias Utilizadas:
 HTML - CSS -Javacript - Boostrap - SCSS.
 Mockups incluidos 
